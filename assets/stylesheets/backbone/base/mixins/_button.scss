@@ -1,0 +1,42 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variants($background, $border, $active-background: darken($background, 7.5%), $active-border: darken($border, 10%)) {
+  @include color-yiq($background);
+  background: linear-gradient(to right, $background, lighten($background, 5%));
+  background-color: $background;
+  border-color: $border;
+  @include box-shadow($btn-box-shadow);
+
+  @include hover {
+    @include color-yiq($active-background);
+    background: linear-gradient(to right, $active-background, $background);
+    background-color: $active-background;
+    border-color: $active-border;
+    // box-shadow: 0 1px 1px 0 rgba($gray-dark, 0.15);
+  }
+
+  &:focus,
+  &.focus {
+    background-color: $active-background;
+    box-shadow: 0 0 0 1px $white, 0 0 0 3px rgba($active-background, 0.25);
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    background-color: $background;
+    border-color: $border;
+  }
+
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    background-color: $active-background;
+    background-image: none; // Remove the gradient for the pressed/active state
+    border-color: $active-border;
+    @include box-shadow($btn-active-box-shadow);
+  }
+}
