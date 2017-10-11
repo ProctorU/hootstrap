@@ -637,11 +637,10 @@ $card-columns-margin: $card-spacer-y;
 
 $tooltip-max-width: 200px;
 $tooltip-color: $white;
-$tooltip-bg: $black;
-$tooltip-opacity: .9;
+$tooltip-bg: $gray-700;
+$tooltip-opacity: 1;
 $tooltip-padding-y: 3px;
 $tooltip-padding-x: 8px;
-$tooltip-margin: 0;
 
 $tooltip-arrow-width: 5px;
 $tooltip-arrow-height: 5px;
