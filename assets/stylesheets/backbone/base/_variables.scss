@@ -508,6 +508,14 @@ $dropdown-item-padding-x: 1.5rem;
 
 $dropdown-header-color: $gray-600;
 
+// Loader Animation
+//
+// All variables associated to the loading component.
+
+$loader-color: $blue;
+$loader-bg: $white;
+$loader-font-size: 5px;
+
 // Z-index master list
 //
 // Warning: Avoid customizing these values. They're used for a bird's eye view

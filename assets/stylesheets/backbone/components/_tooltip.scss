@@ -10,6 +10,12 @@ button[data-toggle="tooltip"] {
   // More info at: https://goo.gl/w8JF4W
   cursor: pointer;
 
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: 99;
+  }
+
   &:after {
     @include tooltip-effects();
     background: $tooltip-bg;
@@ -18,9 +24,7 @@ button[data-toggle="tooltip"] {
     content: attr(title);
     font-size: $font-size-sm;
     padding: $tooltip-padding-y $tooltip-padding-x;
-    position: absolute;
     white-space: nowrap;
-    z-index: 10;
   }
 
   &:before {
@@ -28,8 +32,6 @@ button[data-toggle="tooltip"] {
     @include tooltip-effects();
 
     content: '';
-    position: absolute;
-    z-index: 10;
   }
 
   &:hover {
