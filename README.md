@@ -1,4 +1,4 @@
-Backbone is the CSS framework that powers ProctorU's front-end design. It is
+Nest is the CSS framework that powers ProctorU's front-end design. It is
 distributed via RubyGems, so it's easy to include in your Rails projects.
 
 ## Table of contents
@@ -11,7 +11,7 @@ distributed via RubyGems, so it's easy to include in your Rails projects.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'backbone', git: 'git@github.com:ProctorU/backbone.git'
+gem 'nest', git: 'git@github.com:ProctorU/nest.git'
 ```
 
 And then execute:
@@ -21,19 +21,19 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install backbone
+$ gem install nest
 ```
 
 ## Usage
-Import `backbone` to your CSS files.
+Import `nest` to your CSS files.
 
 ```scss
-@import "backbone";
+@import "nest";
 ```
 
 ## Credits
 
-Backbone is maintained and funded by [ProctorU](https://twitter.com/ProctorU),
+Nest is maintained and funded by [ProctorU](https://twitter.com/ProctorU),
 a simple online proctoring service that allows you to take exams or
 certification tests at home.
 

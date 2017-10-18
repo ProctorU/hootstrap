@@ -1,9 +1,9 @@
-require 'backbone/version'
-require 'backbone/railtie'
+require 'nest/version'
+require 'nest/railtie'
 require 'bootstrap'
 require 'sass'
 
-module Backbone
+module Nest
   def self.load
     asset_root = File.expand_path('../../assets', __FILE__)
     stylesheets_path  = File.join(asset_root, 'stylesheets')
@@ -19,4 +19,4 @@ module Backbone
 end
 
 
-Backbone.load
+Nest.load

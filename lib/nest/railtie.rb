@@ -1,6 +1,6 @@
-module Backbone
+module Nest
   class Railtie < ::Rails::Railtie
-    initializer 'backbone.asset_paths' do |app|
+    initializer 'nest.asset_paths' do |app|
       %w(stylesheets).each do |sub|
         path = File.expand_path("../../../assets/#{sub}", __FILE__)
         app.config.assets.prepend_path(path)
