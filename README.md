@@ -37,6 +37,10 @@ Nest is maintained and funded by [ProctorU](https://twitter.com/ProctorU),
 a simple online proctoring service that allows you to take exams or
 certification tests at home.
 
+We'd also like to give a special shoutout to the following repositories:
+- https://github.com/KaneCohen/modal-vanilla
+- https://github.com/kazzkiq/balloon.css
+
 <br>
 
 <p align="center">

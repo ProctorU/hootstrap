@@ -1,3 +1,6 @@
+// Copyright (c) 2016, Kane Cohen
+// All rights reserved.
+
 var Modal = (function(e) {
   function t(i) {
     if (n[i]) return n[i].exports;
