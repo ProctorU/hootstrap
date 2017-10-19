@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.name        = 'nest'
   s.version     = Nest::VERSION
   s.authors     = ['Justin Licata']
-  s.email       = ['licata.justin@gmail.com']
-  s.homepage    = 'https://github.com/ProctorU'
+  s.email       = ['jlicata@proctoru.com']
+  s.homepage    = 'https://github.com/ProctorU/nest'
   s.summary     = "ProctorU's design system."
   s.description = 'The design system of ProctorU, including components, patterns, and utilities.'
   s.license     = 'MIT'
