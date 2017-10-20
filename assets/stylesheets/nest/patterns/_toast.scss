@@ -1,0 +1,30 @@
+.toast-container {
+  position: fixed;
+  left: calc(50% - #{$toast-width / 2});
+  top: 1rem;
+  width: $toast-width;
+  z-index: 999999;
+
+  &[aria-hidden="true"] {
+    visibility: hidden;
+  }
+}
+
+.toast {
+  @include border-radius($toast-border-radius);
+  border: $toast-border-width solid transparent;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $toast-padding-y $toast-padding-x;
+  width: $toast-width;
+}
+
+@each $color, $value in $theme-colors {
+  .toast-#{$color} {
+    @include toast-variant(
+      theme-color-level($color, -10),
+      theme-color-level($color, -9),
+      theme-color-level($color, 6)
+    );
+  }
+}

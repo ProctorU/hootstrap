@@ -1,0 +1,16 @@
+@mixin toast-variant($background, $border, $color) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  .close {
+    color: $color;
+    opacity: 0.75;
+    text-shadow: none;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+}

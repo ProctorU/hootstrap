@@ -734,6 +734,16 @@ $alert-border-radius: $border-radius;
 $alert-link-font-weight: $font-weight-bold;
 $alert-border-width: $border-width;
 
+// Toasts
+//
+// Define toast colors, border radius, and padding.
+
+$toast-padding-y: 1rem;
+$toast-padding-x: 1rem;
+$toast-border-radius: $border-radius;
+$toast-border-width: $border-width;
+$toast-width: 300px;
+
 // Progress bars
 
 $progress-height: 1rem;

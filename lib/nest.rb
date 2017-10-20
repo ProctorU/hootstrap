@@ -1,5 +1,6 @@
 require 'nest/version'
 require 'nest/railtie'
+require 'nest/engine'
 require 'bootstrap'
 require 'sass'
 
@@ -9,9 +10,9 @@ module Nest
     stylesheets_path  = File.join(asset_root, 'stylesheets')
     javascripts_path  = File.join(asset_root, 'javascripts')
 
-    Sass.load_paths << stylesheets_path
     Sprockets.append_path(stylesheets_path)
     Sprockets.append_path(javascripts_path)
+    Sass.load_paths << stylesheets_path
   end
 end
 
