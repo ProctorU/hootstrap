@@ -5,6 +5,7 @@ PATH
       bootstrap (~> 4.0.0.beta)
       rails (>= 4.2.0)
       sass-rails
+      turbolinks (> 5.0)
 
 GEM
   remote: https://rubygems.org/
@@ -47,12 +48,12 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (8.0.0)
-    autoprefixer-rails (7.1.4.1)
+    autoprefixer-rails (7.1.5)
       execjs
-    bootstrap (4.0.0.beta)
+    bootstrap (4.0.0.beta2)
       autoprefixer-rails (>= 6.0.3)
-      popper_js (~> 1.11.1)
-      sass (>= 3.4.19)
+      popper_js (>= 1.12.3, < 2)
+      sass (>= 3.5.2)
     builder (3.2.3)
     concurrent-ruby (1.0.5)
     crass (1.0.2)
@@ -77,7 +78,7 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
-    popper_js (1.11.1)
+    popper_js (1.12.5)
     rack (2.0.3)
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
@@ -129,6 +130,9 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.8)
+    turbolinks (5.0.1)
+      turbolinks-source (~> 5)
+    turbolinks-source (5.0.3)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
     websocket-driver (0.6.5)

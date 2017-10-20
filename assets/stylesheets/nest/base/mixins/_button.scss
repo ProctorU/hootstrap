@@ -4,14 +4,14 @@
 // and disabled options for all buttons
 
 @mixin button-variants($background, $border, $active-background: darken($background, 7.5%), $active-border: darken($border, 10%)) {
-  @include color-yiq($background);
+  color: color-yiq($background);
   background: linear-gradient(to right, $background, lighten($background, 5%));
   background-color: $background;
   border-color: $border;
   @include box-shadow($btn-box-shadow);
 
   @include hover {
-    @include color-yiq($active-background);
+    color: color-yiq($active-background);
     background: linear-gradient(to right, $active-background, $background);
     background-color: $active-background;
     border-color: $active-border;
