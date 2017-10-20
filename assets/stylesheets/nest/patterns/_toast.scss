@@ -17,6 +17,10 @@
   margin-right: auto;
   padding: $toast-padding-y $toast-padding-x;
   width: $toast-width;
+
+  .close {
+    margin-left: $spacer / 4;
+  }
 }
 
 @each $color, $value in $theme-colors {
