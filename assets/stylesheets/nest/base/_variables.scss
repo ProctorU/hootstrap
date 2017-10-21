@@ -254,8 +254,13 @@ $text-muted: $gray-600;
 $blockquote-small-color: $gray-600;
 $blockquote-font-size: ($font-size-base * 1.25);
 
-$hr-border-color: rgba($black, .1);
+$hr-border-color: rgba($black, 0.1);
 $hr-border-width: $border-width;
+
+$hr-text-color: rgba($black, 0.4);
+$hr-text-line-height: 1;
+$hr-text-padding-x: 0.5rem;
+$hr-text-padding-y: 0;
 
 $mark-padding: .2em;
 
