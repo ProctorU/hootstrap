@@ -38,7 +38,6 @@ function Toast(options) {
   this.containerEl = document.querySelector('.toast-container');
   this.el = document.querySelector('.toast');
   this.handleKeyup = this.handleKeyup.bind(this);
-  this.handleOutsideClick = this.handleOutsideClick.bind(this);
 
   this.init();
 }
@@ -60,7 +59,7 @@ Toast.prototype._createElements = function() {
   });
 };
 
-Toast.prototype.addEventListeners = function() {
+Toast.prototype.bindEventListeners = function() {
   const dismissEl = document.querySelector('[data-dismiss="toast"]');
 
   dismissEl.addEventListener('click', () => {
@@ -79,17 +78,10 @@ Toast.prototype.addEventListeners = function() {
   }
 
   document.addEventListener('keyup', this.handleKeyup);
-  document.addEventListener('click', this.handleOutsideClick);
 };
 
 Toast.prototype.handleKeyup = function(event) {
   if (event.keyCode == 27) {
-    this.close();
-  }
-};
-
-Toast.prototype.handleOutsideClick = function(event) {
-  if (!this.el.contains(event.target)) {
     this.close();
   }
 };
@@ -110,7 +102,6 @@ Toast.prototype.close = function() {
       this.focusedElBeforeOpen.focus();
     }
 
-    document.removeEventListener('click', this.handleOutsideClick);
     document.removeEventListener('keyup', this.handleKeyup);
 
     resolve();
@@ -170,6 +161,6 @@ Toast.prototype.init = function() {
     })
     .then(() => {
       this._open();
-      this.addEventListeners();
+      this.bindEventListeners();
     });
 };
