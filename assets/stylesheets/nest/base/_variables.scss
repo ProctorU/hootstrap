@@ -517,9 +517,9 @@ $dropdown-header-color: $gray-600;
 //
 // All variables associated to the loading component.
 
-$loader-color: $blue;
-$loader-bg: $white;
-$loader-font-size: 5px;
+$loader-bg: transparent;
+$loader-fg: $blue;
+$loader-width: 50px;
 
 // Z-index master list
 //
