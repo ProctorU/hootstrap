@@ -1,6 +1,27 @@
 // Copyright (c) 2016, Kane Cohen
 // All rights reserved.
 
+// Usage
+//
+// var myModal = new Modal({
+//   el: document.getElementById('my-modal')
+// }).show();
+//
+// Options
+// | el                 | node    |
+// | animate            | boolean |
+// | appendTo           | string  |
+// | backdrop           | boolean |
+// | keyboard           | boolean |
+// | title              | string  |
+// | header             | boolean |
+// | content            | boolean |
+// | footer             | boolean |
+// | headerClose        | boolean |
+// | construct          | boolean |
+// | transition         | integer |
+// | backdropTransition | integer |
+
 var Modal = (function(e) {
   function t(i) {
     if (n[i]) return n[i].exports;
