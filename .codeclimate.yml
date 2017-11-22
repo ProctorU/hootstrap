@@ -4,8 +4,6 @@ prepare:
     - "https://raw.githubusercontent.com/ProctorU/guides/master/style/scss/.scss-lint.yml"
 
 plugins:
-  brakeman:
-    enabled: true
   fixme:
     enabled: true
   flog:
