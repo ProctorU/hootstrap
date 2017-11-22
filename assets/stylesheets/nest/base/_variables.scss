@@ -86,6 +86,9 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
+// Set a specific jump point for requesting color jumps
+$theme-color-interval: 8%;
+
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
@@ -378,8 +381,9 @@ $form-check-inline-margin-x: 0.75rem;
 
 $form-group-margin-bottom: 1rem;
 
-$form-group-error-bg: $red;
-$form-group-error-color: $white;
+$form-group-error-bg: theme-color-level("danger", -10);
+$form-group-error-border: theme-color-level("danger", -9);
+$form-group-error-color: theme-color-level("danger", 6);
 $form-group-error-border-radius: $border-radius;
 $form-group-error-padding-x: 0.5rem;
 $form-group-error-padding-y: 0.1rem;

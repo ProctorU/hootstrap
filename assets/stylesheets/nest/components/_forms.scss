@@ -30,6 +30,7 @@ select.form-control {
 .form-group-error {
   background-color: $form-group-error-bg;
   border-radius: $form-group-error-border-radius;
+  border: 1px solid $form-group-error-border;
   color: $form-group-error-color;
   display: inline-block;
   font-size: $font-size-sm;
@@ -38,10 +39,9 @@ select.form-control {
   position: relative;
   z-index: 3;
 
-  &::before {
+  &::before,
+  &::after {
     border: solid transparent;
-    border-bottom-color: $form-group-error-bg;
-    border-width: 6px;
     bottom: 100%;
     content: " ";
     height: 0;
@@ -49,5 +49,16 @@ select.form-control {
     pointer-events: none;
     position: absolute;
     width: 0;
+  }
+
+  &::before {
+    border-bottom-color: $form-group-error-border;
+    border-width: 6px;
+    margin-left: -1px;
+  }
+
+  &::after {
+    border-bottom-color: $form-group-error-bg;
+    border-width: 5px;
   }
 }
