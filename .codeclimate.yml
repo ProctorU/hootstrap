@@ -20,3 +20,4 @@ plugins:
 exclude_patterns:
   - 'bin/'
   - 'test/'
+  - 'assets/javascripts/nest/modal.js' # 3rd party library
