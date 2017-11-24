@@ -1,26 +1,28 @@
+//= require ./utils/dynamicListener
+
 document.addEventListener('turbolinks:load', () => {
-  const elements = document.querySelectorAll('[data-prompt]');
+  let confirmed = false;
 
-  elements.forEach(element => {
-    let confirmed = false;
+  addDynamicEventListener(document.body, 'click', '[data-prompt]', handleClick);
 
-    element.addEventListener('click', event => {
-      if (confirmed) return;
+  function handleClick(event) {
+    if (confirmed) {
+      confirmed = false;
+      return;
+    }
 
-      Rails.stopEverything(event);
+    Rails.stopEverything(event);
 
-      const finalEvent = event;
-      const target = event.currentTarget;
+    const target = event.target;
 
-      new Toast({
-        message: target.getAttribute('data-prompt'),
-        type: 'danger',
-        action: 'OK',
-        onClick: () => {
-          confirmed = true;
-          target.click();
-        }
-      });
+    new Toast({
+      message: target.getAttribute('data-prompt'),
+      type: 'danger',
+      action: 'OK',
+      onClick: () => {
+        confirmed = true;
+        target.click({ something: 'hello' });
+      }
     });
-  });
+  }
 });
