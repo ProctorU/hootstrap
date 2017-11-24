@@ -21,3 +21,4 @@ exclude_patterns:
   - 'bin/'
   - 'test/'
   - 'assets/javascripts/nest/modal.js' # 3rd party library
+  - 'assets/javascripts/nest/utils/dynamicListener.js' # 3rd party library
