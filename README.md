@@ -1,4 +1,4 @@
-Nest is the CSS framework that powers ProctorU's front-end design. It is
+Hootstrap is the CSS framework that powers ProctorU's front-end design. It is
 distributed via RubyGems, so it's easy to include in your Rails projects.
 
 ## Table of contents
