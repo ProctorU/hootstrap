@@ -1,0 +1,17 @@
+{
+  "name": "nest-docs",
+  "version": "0.1.0",
+  "description": "The CSS framework that powers ProctorU’s front-end design.",
+  "repository": "git@github.com:ProctorU/nest.git",
+  "author": "Justin Licata <licata.justin@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  },
+  "scripts": {
+    "css-compile": "node-sass --include-path $(cd .. && bundle show bootstrap)/assets/stylesheets --include-path ../assets/stylesheets --output-style expanded --source-map true --source-map-contents true --precision 6 ../assets/stylesheets/nest.scss assets/css/nest.css"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0.beta"
+  }
+}
