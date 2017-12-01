@@ -11,7 +11,7 @@ distributed via RubyGems, so it's easy to include in your Rails projects.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'nest', git: 'git@github.com:ProctorU/nest.git'
+gem 'hootstrap', git: 'git@github.com:ProctorU/hootstrap.git'
 ```
 
 And then execute:
@@ -21,14 +21,14 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install nest
+$ gem install hootstrap
 ```
 
 ## Usage
-Import `nest` to your CSS files.
+Import `hootstrap` to your CSS files.
 
 ```scss
-@import "nest";
+@import "hootstrap";
 ```
 
 ## Credits
