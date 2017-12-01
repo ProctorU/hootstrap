@@ -33,7 +33,7 @@ Import `hootstrap` to your CSS files.
 
 ## Credits
 
-Nest is maintained and funded by [ProctorU](https://twitter.com/ProctorU),
+Hootstrap is maintained and funded by [ProctorU](https://twitter.com/ProctorU),
 a simple online proctoring service that allows you to take exams or
 certification tests at home.
 

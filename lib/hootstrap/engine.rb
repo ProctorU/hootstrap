@@ -1,4 +1,4 @@
-module Nest
+module Hootstrap
   module Rails
     class Engine < ::Rails::Engine
       initializer 'hootstrap.assets.precompile' do |app|

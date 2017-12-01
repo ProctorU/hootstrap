@@ -6,7 +6,7 @@ require 'hootstrap/version'
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = 'hootstrap'
-  s.version     = Nest::VERSION
+  s.version     = Hootstrap::VERSION
   s.authors     = ['Justin Licata']
   s.email       = ['jlicata@proctoru.com']
   s.homepage    = 'https://github.com/ProctorU/hootstrap'

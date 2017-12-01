@@ -4,7 +4,7 @@ require 'hootstrap/engine'
 require 'bootstrap'
 require 'sass'
 
-module Nest
+module Hootstrap
   def self.load
     asset_root = File.expand_path('../../assets', __FILE__)
     stylesheets_path  = File.join(asset_root, 'stylesheets')
@@ -17,4 +17,4 @@ module Nest
 end
 
 
-Nest.load
+Hootstrap.load

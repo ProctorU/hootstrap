@@ -1,4 +1,4 @@
-module Nest
+module Hootstrap
   class Railtie < ::Rails::Railtie
     initializer 'hootstrap.asset_paths' do |app|
       %w(stylesheets).each do |sub|

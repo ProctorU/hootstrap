@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class Nest::Test < ActiveSupport::TestCase
+class Hootstrap::Test < ActiveSupport::TestCase
   test "truth" do
-    assert_kind_of Module, Nest
+    assert_kind_of Module, Hootstrap
   end
 end
