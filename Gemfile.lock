@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    nest (0.1.0)
+    hootstrap (0.1.0)
       bootstrap (~> 4.0.0.beta)
       rails (>= 4.2.0)
       sass-rails
@@ -143,7 +143,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  nest!
+  hootstrap!
 
 BUNDLED WITH
    1.15.4

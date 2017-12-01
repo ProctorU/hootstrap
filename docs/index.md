@@ -1,5 +1,0 @@
----
-layout: docs
----
-
-Hello World
