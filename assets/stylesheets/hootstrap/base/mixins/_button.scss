@@ -29,6 +29,7 @@
   &:disabled {
     background-color: $background;
     border-color: $border;
+    pointer-events: none;
   }
 
   &:active,
