@@ -1,0 +1,10 @@
+- name: primary
+  hex: "#116ff7"
+- name: secondary
+  hex: "#868e96"
+- name: success
+  hex: "#008761"
+- name: danger
+  hex: "#e21c2c"
+- name: warning
+  hex: "#f3bf51"
