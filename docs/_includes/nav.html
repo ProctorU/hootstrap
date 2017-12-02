@@ -1,6 +1,6 @@
 <div class="list-group">
   {% for link in site.data.nav %}
-    <a href="{{ site.baseurl }}/content/{{ link.title | slugify }}"
+    <a href="{{ site.url }}/content/{{ link.title | slugify }}"
       class="list-group-item list-group-item-action {% if page.title == link.title %}active{% endif %}">
       {{ link.title }}
     </a>
