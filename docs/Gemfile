@@ -1,0 +1,6 @@
+source('https://rubygems.org')
+
+gem('github-pages')
+gem('hootstrap', '~> 0.1.1')
+gem('jekyll')
+gem('jekyll-assets')

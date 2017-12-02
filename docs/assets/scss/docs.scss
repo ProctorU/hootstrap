@@ -1,0 +1,232 @@
+---
+---
+
+.page-title {
+  border-bottom: 1px solid #e9ecef;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  padding-bottom: 0.3em;
+}
+
+.nest-example {
+  background-color: #fff;
+  border-radius: .25rem .25rem 0 0;
+  border: 1px solid #e9ecef;
+  line-height: 1.4;
+  padding: 1rem;
+  position: relative;
+}
+
+.nest-example::before,
+.nest-example::after {
+  content: "";
+  display: table;
+}
+
+.nest-example .alert {
+  margin-bottom: 0;
+}
+
+.nest-example + .highlight {
+  background-color: #fff;
+  border-radius: 0 0 .25rem .25rem;
+  border: 1px solid #e9ecef;
+  margin-bottom: 1rem;
+  margin-top: -1px;
+}
+
+.highlight pre {
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  margin-bottom: 0;
+  overflow: auto;
+  padding: 1rem;
+}
+
+/**
+ * Syntax
+ */
+.hll {
+  background-color: #ffc;
+}
+.c {
+  color: #999;
+}
+.k {
+  color: #069;
+}
+.o {
+  color: #555;
+}
+.cm {
+  color: #999;
+}
+.cp {
+  color: #099;
+}
+.c1 {
+  color: #999;
+}
+.cs {
+  color: #999;
+}
+.gd {
+  background-color: #fcc;
+  border: 1px solid #c00;
+}
+.ge {
+  font-style: italic;
+}
+.gr {
+  color: #f00;
+}
+.gh {
+  color: #030;
+}
+.gi {
+  background-color: #cfc;
+  border: 1px solid #0c0;
+}
+.go {
+  color: #aaa;
+}
+.gp {
+  color: #009;
+}
+.gu {
+  color: #030;
+}
+.gt {
+  color: #9c6;
+}
+.kc {
+  color: #069;
+}
+.kd {
+  color: #069;
+}
+.kn {
+  color: #069;
+}
+.kp {
+  color: #069;
+}
+.kr {
+  color: #069;
+}
+.kt {
+  color: #078;
+}
+.m {
+  color: #f60;
+}
+.s {
+  color: #d44950;
+}
+.na {
+  color: #4f9fcf;
+}
+.nb {
+  color: #366;
+}
+.nc {
+  color: #0a8;
+}
+.no {
+  color: #360;
+}
+.nd {
+  color: #99f;
+}
+.ni {
+  color: #999;
+}
+.ne {
+  color: #c00;
+}
+.nf {
+  color: #c0f;
+}
+.nl {
+  color: #99f;
+}
+.nn {
+  color: #0cf;
+}
+.nt {
+  color: #2f6f9f;
+}
+.nv {
+  color: #033;
+}
+.ow {
+  color: #000;
+}
+.w {
+  color: #bbb;
+}
+.mf {
+  color: #f60;
+}
+.mh {
+  color: #f60;
+}
+.mi {
+  color: #f60;
+}
+.mo {
+  color: #f60;
+}
+.sb {
+  color: #c30;
+}
+.sc {
+  color: #c30;
+}
+.sd {
+  font-style: italic;
+  color: #c30;
+}
+.s2 {
+  color: #c30;
+}
+.se {
+  color: #c30;
+}
+.sh {
+  color: #c30;
+}
+.si {
+  color: #a00;
+}
+.sx {
+  color: #c30;
+}
+.sr {
+  color: #3aa;
+}
+.s1 {
+  color: #c30;
+}
+.ss {
+  color: #fc3;
+}
+.bp {
+  color: #366;
+}
+.vc {
+  color: #033;
+}
+.vg {
+  color: #033;
+}
+.vi {
+  color: #033;
+}
+.il {
+  color: #f60;
+}
