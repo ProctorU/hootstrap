@@ -1,6 +1,6 @@
-title: Nest
+title: Hootstrap
 description: The CSS framework that powers ProctorU's front-end design.
-url: https://proctoru.github.io/nest
+url: https://proctoru.github.io/hootstrap
 
 plugins:
   - jekyll-assets
