@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    hootstrap (0.1.1)
+    hootstrap (0.1.2)
       bootstrap (~> 4.0.0.beta)
       rails (>= 4.2.0)
       sass-rails
