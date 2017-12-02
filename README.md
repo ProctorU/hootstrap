@@ -8,27 +8,30 @@ distributed via RubyGems, so it's easy to include in your Rails projects.
 - [Credits](#credits)
 
 ## Installation
+
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'hootstrap', git: 'git@github.com:ProctorU/hootstrap.git'
+gem 'hootstrap'
 ```
 
 And then execute:
 ```bash
-$ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install hootstrap
+$ bundle install
 ```
 
 ## Usage
-Import `hootstrap` to your CSS files.
+
+Import `hootstrap` CSS to your asset pipeline.
 
 ```scss
 @import "hootstrap";
+```
+
+Import `hootstrap` JS to your asset pipeline.
+
+```js
+//= require hootstrap
 ```
 
 ## Credits
