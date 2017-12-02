@@ -59,7 +59,7 @@ bundle install
       <p>4. Import Hootstrap's JS into your asset pipeline.</p>
 
 {% highlight js %}
-//= require "hootstrap";
+//= require hootstrap
 {% endhighlight %}
     </div>
   </div>
