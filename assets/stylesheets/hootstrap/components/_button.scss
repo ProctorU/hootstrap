@@ -1,9 +1,0 @@
-//
-// Base styles
-//
-
-@each $color, $value in $theme-colors {
-  .btn-#{$color} {
-    @include button-variants($value, $value);
-  }
-}

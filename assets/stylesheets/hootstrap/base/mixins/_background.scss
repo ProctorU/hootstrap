@@ -1,8 +1,0 @@
-// Contextual backgrounds
-
-@mixin bg-variant-hover($parent, $color) {
-  #{$parent}:hover {
-    @include transition($transition-base);
-    background-color: $color !important;
-  }
-}
