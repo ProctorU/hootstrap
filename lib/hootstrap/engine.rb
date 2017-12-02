@@ -1,8 +1,10 @@
 module Hootstrap
   module Rails
     class Engine < ::Rails::Engine
-      initializer 'hootstrap.assets.precompile' do |app|
-        app.config.assets.paths << root.join('app/assets/stylesheets').to_s
+      initializer 'hootstrap.assets' do |app|
+        %w(stylesheets javascripts).each do |sub|
+          app.config.assets.paths << root.join('assets', sub).to_s
+        end
       end
     end
   end
