@@ -12,10 +12,13 @@
 
 
   <body>
-    <header class="navbar navbar-dark navbar-expand bg-primary flex-column flex-md-row mb-4">
+    <div class="bg-primary pb-5 mb-5">
   <div class="container">
-    <a class="navbar-brand mr-0 mr-md-4 text-white" href="https://proctoru.github.io/hootstrap/" aria-label="Nest">
-      <svg class="align-middle" width="34" height="34" viewBox="0 0 782 782" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <div class="row justify-content-md-center">
+      <div class="col-md-10">
+        <div class="mx-auto d-flex align-items-center pt-3 pb-5">
+          <div class="d-flex w-100 text-light">
+            <svg class="align-middle mr-auto" width="34" height="34" viewBox="0 0 782 782" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>nest</title>
     <defs></defs>
     <g id="nest" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -29,56 +32,60 @@
     </g>
 </svg>
 
-
-     <span class="ml-2 h6 text-light">ProctorU Nest</span>
-    </a>
-
-   <div class="navbar-nav-scroll">
-      <ul class="navbar-nav nest-navbar-nav flex-row">
-        <li class="nav-item">
-          <a class="nav-link" href="https://proctoru.github.io/hootstrap/">Docs</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</header>
-
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="list-group">
-  
-    <a href="https://proctoru.github.io/hootstrap/content/alerts"
-      class="list-group-item list-group-item-action ">
-      Alerts
-    </a>
-  
-    <a href="https://proctoru.github.io/hootstrap/content/buttons"
-      class="list-group-item list-group-item-action ">
-      Buttons
-    </a>
-  
-    <a href="https://proctoru.github.io/hootstrap/content/badges"
-      class="list-group-item list-group-item-action ">
-      Badges
-    </a>
-  
-</div>
-
+            <a href="https://github.com/ProctorU/hootstrap" class="text-light p-2">
+              GitHub
+            </a>
+          </div>
         </div>
 
-        <div class="col-md-8">
-          <div class="page-title">
-            
-          </div>
+        <div class="text-light">
+          <h4 class="display-4 mb-3">Hootstrap</h4>
 
-          <p class="lead"></p>
+          <p class="lead">
+            The CSS framework that powers ProctorU's front-end design, built from
+            the <a class="text-light font-weight-bold" href="http://getbootstrap.com">Bootstrap</a> foundation.
+          </p>
 
-          <p>Hello World</p>
-
+          <a href="https://proctoru.github.io/hootstrap/content/alerts" class="btn btn-outline-light">
+            View documentation
+          </a>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-10">
+      <h4 class="mb-4">Installation</h4>
+
+      <p>1. Add the <code>hootstrap</code> gem to your <code>Gemfile</code>.</p>
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">gem</span><span class="p">(</span><span class="s1">'hootstrap'</span><span class="p">)</span></code></pre></figure>
+
+
+      <p>2. Install the gem.</p>
+
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">bundle install</code></pre></figure>
+
+
+      <p>3. Import Hootstrap's CSS into your asset pipeline.</p>
+
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">"hootstrap"</span><span class="p">;</span></code></pre></figure>
+
+
+      <p>4. Import Hootstrap's JS into your asset pipeline.</p>
+
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">//= require "hootstrap";</span></code></pre></figure>
+
+    </div>
+  </div>
+</div>
+
   </body>
 </html>
