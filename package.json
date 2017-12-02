@@ -6,6 +6,7 @@
   "author": "Justin Licata <licata.justin@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build-docs": "cd docs && bundle exec jekyll build JEKYLL_ENV=production",
     "deploy-docs": "git push origin :gh-pages && git subtree push --prefix docs/_site origin gh-pages"
   }
 }
