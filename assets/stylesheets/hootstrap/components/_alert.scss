@@ -5,3 +5,20 @@
 .alert-alert {
   @extend .alert-danger;
 }
+
+// Close styles
+
+@each $color, $value in $theme-colors {
+  $text-color: theme-color-level($color, 6);
+
+  .alert-#{$color}.alert-dismissible .close {
+    color: $text-color;
+    opacity: 0.75;
+    text-shadow: none;
+
+    @include hover-focus {
+      color: $text-color;
+      opacity: 1;
+    }
+  }
+}

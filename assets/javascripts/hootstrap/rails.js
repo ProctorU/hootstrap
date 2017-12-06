@@ -1,6 +1,7 @@
 //= require ./utils/dynamicListener
+//= require ./utils/turbolinks
 
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener(HootstrapEvent, () => {
   let confirmed = false;
 
   addDynamicEventListener(document.body, 'click', '[data-prompt]', handleClick);
@@ -21,7 +22,7 @@ document.addEventListener('turbolinks:load', () => {
       action: 'OK',
       onClick: () => {
         confirmed = true;
-        target.click({ something: 'hello' });
+        target.click();
       }
     });
   }
