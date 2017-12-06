@@ -69,3 +69,30 @@ dividers.
   <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
 </div>
 {% endhighlight %}
+
+#### Dismissing Alerts
+
+Alerts can also be dismissed by the user by adding the following markup:
+
+- Add the class `alert-dismissible` to your alert.
+- Add the following data attribute to the close element: `data-dismiss="alert"`.
+
+<div class="nest-example">
+  <div class="alert alert-primary alert-dismissible" role="alert">
+    This alert is dismissible!
+
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span class="pointerless" aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+
+{% highlight html %}
+<div class="alert alert-primary alert-dismissible" role="alert">
+  This alert is dismissible!
+
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span class="pointerless" aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endhighlight %}
