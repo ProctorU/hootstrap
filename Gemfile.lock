@@ -5,7 +5,6 @@ PATH
       bootstrap (~> 4.0.0.beta)
       rails (>= 4.2.0)
       sass-rails
-      turbolinks (> 5.0)
 
 GEM
   remote: https://rubygems.org/
@@ -128,9 +127,6 @@ GEM
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
-    turbolinks (5.0.1)
-      turbolinks-source (~> 5)
-    turbolinks-source (5.0.3)
     tzinfo (1.2.4)
       thread_safe (~> 0.1)
     websocket-driver (0.6.5)

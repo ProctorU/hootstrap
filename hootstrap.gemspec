@@ -19,5 +19,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '>= 4.2.0'
   s.add_dependency 'sass-rails'
   s.add_dependency 'bootstrap', '~> 4.0.0.beta'
-  s.add_dependency 'turbolinks', '> 5.0'
 end
