@@ -5,6 +5,7 @@ url: https://proctoru.github.io/hootstrap
 plugins:
   - jekyll-assets
   - hootstrap
+  - jekyll-babel
 
 assets:
   digest: false

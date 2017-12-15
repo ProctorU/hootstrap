@@ -38,8 +38,12 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (6.0.4)
-    autoprefixer-rails (7.2.1)
+    autoprefixer-rails (7.2.3)
       execjs
+    babel-source (5.8.35)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
     bootstrap (4.0.0.beta2.1)
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.3, < 2)
@@ -118,11 +122,10 @@ GEM
       typhoeus (~> 0.7)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    hootstrap (0.1.4)
+    hootstrap (0.1.6)
       bootstrap (~> 4.0.0.beta)
       rails (>= 4.2.0)
       sass-rails
-      turbolinks (> 5.0)
     html-pipeline (2.7.1)
       activesupport (>= 2)
       nokogiri (>= 1.4)
@@ -149,6 +152,8 @@ GEM
       sprockets (~> 3.3, < 3.8)
     jekyll-avatar (0.5.0)
       jekyll (~> 3.0)
+    jekyll-babel (1.1.0)
+      babel-transpiler
     jekyll-coffeescript (1.0.2)
       coffee-script (~> 2.2)
       coffee-script-source (~> 1.11.1)
@@ -329,9 +334,6 @@ GEM
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
-    turbolinks (5.0.1)
-      turbolinks-source (~> 5)
-    turbolinks-source (5.0.3)
     typhoeus (0.8.0)
       ethon (>= 0.8.0)
     tzinfo (1.2.4)
@@ -343,9 +345,10 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  hootstrap (~> 0.1.4)
+  hootstrap (~> 0.1.6)
   jekyll
   jekyll-assets
+  jekyll-babel
 
 BUNDLED WITH
    1.15.4
