@@ -6,7 +6,7 @@ function checkTurbolinks() {
       return 'turbolinks:load';
     }
   } else {
-    return 'ready';
+    return 'DOMContentLoaded';
   }
 }
 
