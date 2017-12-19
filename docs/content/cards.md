@@ -86,7 +86,7 @@ see the markup below to the best way to accomplish this.
     </fieldset>
 
     <fieldset class="form-group">
-      <label for="name">Your email</label>
+      <label for="email">Your email</label>
       <input type="email" class="form-control" id="email"
         aria-describedby="email" placeholder="Your email"
         value="engineering@proctoru.com" />
@@ -109,7 +109,7 @@ see the markup below to the best way to accomplish this.
   </fieldset>
 
   <fieldset class="form-group">
-    <label for="name">Your email</label>
+    <label for="email">Your email</label>
     <input type="email" class="form-control" id="email"
       aria-describedby="email" placeholder="Your email"
       value="engineering@proctoru.com" />
