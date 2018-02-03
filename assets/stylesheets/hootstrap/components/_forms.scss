@@ -9,7 +9,8 @@
 //
 // Target select specifically
 //
-select.form-control {
+select.form-control,
+select.custom-select {
   max-width: 100%;
   padding-right: 24px;
   padding-right: 8px \9;

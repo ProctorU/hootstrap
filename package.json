@@ -5,9 +5,12 @@
   "repository": "git@github.com:ProctorU/hootstrap.git",
   "author": "Justin Licata <licata.justin@gmail.com>",
   "license": "MIT",
+  "main": "index.scss",
+  "style": "./index.scss",
   "scripts": {
     "jekyll": "cd docs && bundle exec jekyll serve",
     "build-docs": "cd docs && bundle exec jekyll build JEKYLL_ENV=production",
     "deploy-docs": "git push origin :gh-pages && git subtree push --prefix docs/_site origin gh-pages"
-  }
+  },
+  "dependencies": {}
 }

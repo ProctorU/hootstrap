@@ -1,5 +1,4 @@
 require 'hootstrap/version'
-require 'bootstrap'
 
 module Hootstrap
   class << self

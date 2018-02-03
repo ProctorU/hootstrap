@@ -14,7 +14,7 @@ $gray-200: #e9ecef;
 $gray-300: #dee2e6;
 $gray-400: #ced4da;
 $gray-500: #adb5bd;
-$gray-600: #868e96;
+$gray-600: #6c757d;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
@@ -98,7 +98,7 @@ $enable-rounded: true;
 $enable-shadows: true;
 $enable-gradients: true;
 $enable-transitions: true;
-$enable-hover-media-query: true;
+$enable-hover-media-query: true; // Deprecated, no longer affects any compiled CSS
 $enable-grid-classes: true;
 $enable-print-styles: true;
 
@@ -109,17 +109,19 @@ $enable-print-styles: true;
 // You can add more entries to the $spacers map, should you need more variation.
 
 $spacer: 1rem;
-$spacers: (
+$spacers: ();
+$spacers: map-merge((
   0: 0,
   1: ($spacer * .25),
   2: ($spacer * .5),
   3: $spacer,
   4: ($spacer * 1.5),
   5: ($spacer * 3)
-);
+), $spacers);
 
 // This variable affects the `.h-*` and `.w-*` classes.
-$sizes: (25: 25%, 50: 50%, 75: 75%, 100: 100%);
+$sizes: ();
+$sizes: map-merge((25: 25%, 50: 50%, 75: 75%, 100: 100%), $sizes);
 
 // Body
 //
@@ -181,7 +183,7 @@ $line-height-lg: 1.5;
 $line-height-sm: 1.5;
 
 $border-width: 1px;
-$border-color: $gray-200;
+$border-color: $gray-300;
 
 $border-radius: 0.25rem;
 $border-radius-lg: 0.3rem;
@@ -308,6 +310,12 @@ $input-btn-padding-y: .375rem;
 $input-btn-padding-x: .75rem;
 $input-btn-line-height: $line-height-base;
 
+$input-btn-border-width: $border-width;
+
+$input-btn-focus-width: 0.2rem;
+$input-btn-focus-color: rgba($component-active-bg, .25);
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
+
 $input-btn-padding-y-sm: .25rem;
 $input-btn-padding-x-sm: .5rem;
 $input-btn-line-height-sm: $line-height-sm;
@@ -340,7 +348,7 @@ $input-disabled-bg: $gray-200;
 
 $input-color: $gray-700;
 $input-border-color: $gray-400;
-$input-btn-border-width: $border-width; // For form controls and buttons
+$input-border-width: $input-btn-border-width;
 $input-box-shadow: inset 0 1px 2px rgba(216, 221, 230, 0.4);
 
 $input-border-radius: $border-radius;
@@ -348,13 +356,13 @@ $input-border-radius-lg: $border-radius-lg;
 $input-border-radius-sm: $border-radius-sm;
 
 $input-focus-bg: $input-bg;
-$input-focus-border-color: $blue;
-$input-focus-box-shadow: inset 0 0 1px rgba($blue, 0.75);
+$input-focus-border-color: lighten($component-active-bg, 25%);
+$input-focus-box-shadow: $input-btn-focus-box-shadow;
 $input-focus-color: $input-color;
 
 $input-placeholder-color: $gray-600;
 
-$input-height-border: $input-btn-border-width * 2;
+$input-height-border: $input-border-width * 2;
 
 $input-height-inner: ($font-size-base * $input-btn-line-height) + ($input-btn-padding-y *
       2);
@@ -397,22 +405,23 @@ $custom-control-spacer-y: .25rem;
 $custom-control-spacer-x: 1rem;
 
 $custom-control-indicator-size: 1rem;
-$custom-control-indicator-bg: #ddd;
+$custom-control-indicator-bg: $gray-300;
 $custom-control-indicator-bg-size: 50% 50%;
 $custom-control-indicator-box-shadow: inset 0 .25rem .25rem rgba($black, .1);
 
 $custom-control-indicator-disabled-bg: $gray-200;
 $custom-control-description-disabled-color: $gray-600;
 
-$custom-control-indicator-checked-color: $white;
-$custom-control-indicator-checked-bg: theme-color("primary");
+$custom-control-indicator-checked-color: $component-active-color;
+$custom-control-indicator-checked-bg: $component-active-bg;
+$custom-control-indicator-checked-disabled-bg: rgba(theme-color("primary"), 0.5);
 $custom-control-indicator-checked-box-shadow: none;
 
 $custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg,
   0 0 0 3px theme-color("primary");
 
-$custom-control-indicator-active-color: $white;
-$custom-control-indicator-active-bg: lighten(theme-color("primary"), 35%);
+$custom-control-indicator-active-color: $component-active-color;
+$custom-control-indicator-active-bg: lighten($component-active-bg, 35%);
 $custom-control-indicator-active-box-shadow: none;
 
 $custom-checkbox-indicator-border-radius: $border-radius;
@@ -422,7 +431,7 @@ $custom-checkbox-indicator-icon-checked: str-replace(
   "%23"
 );
 
-$custom-checkbox-indicator-indeterminate-bg: theme-color("primary");
+$custom-checkbox-indicator-indeterminate-bg: $component-active-bg;
 $custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color;
 $custom-checkbox-indicator-icon-indeterminate: str-replace(
   url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/%3E%3C/svg%3E"),
@@ -459,8 +468,7 @@ $custom-select-border-color: $input-border-color;
 $custom-select-border-radius: $border-radius;
 
 $custom-select-focus-border-color: lighten(theme-color("primary"), 25%);
-$custom-select-focus-box-shadow: inset 0 1px 2px rgba($black, .075),
-  0 0 5px rgba($custom-select-focus-border-color, .5);
+$custom-select-focus-box-shadow: $input-btn-focus-box-shadow;
 
 $custom-select-font-size-sm: 75%;
 $custom-select-height-sm: $input-height-sm;
@@ -544,13 +552,13 @@ $nav-link-padding-y: .5rem;
 $nav-link-padding-x: 1rem;
 $nav-link-disabled-color: $gray-600;
 
-$nav-tabs-border-color: #ddd;
+$nav-tabs-border-color: $gray-300;
 $nav-tabs-border-width: $border-width;
 $nav-tabs-border-radius: $border-radius;
 $nav-tabs-link-hover-border-color: $gray-200;
 $nav-tabs-link-active-color: $gray-700;
 $nav-tabs-link-active-bg: $body-bg;
-$nav-tabs-link-active-border-color: #ddd;
+$nav-tabs-link-active-border-color: $gray-300;
 
 $nav-pills-border-radius: $border-radius;
 $nav-pills-link-active-color: $component-active-color;
@@ -560,6 +568,8 @@ $nav-pills-link-active-bg: $component-active-bg;
 
 $navbar-padding-y: ($spacer / 2);
 $navbar-padding-x: $spacer;
+
+$navbar-nav-link-padding-x: 0.5rem;
 
 $navbar-brand-font-size: $font-size-lg;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
@@ -611,19 +621,21 @@ $pagination-line-height: 1.25;
 $pagination-color: $link-color;
 $pagination-bg: $white;
 $pagination-border-width: $border-width;
-$pagination-border-color: #ddd;
+$pagination-border-color: $gray-300;
+
+$pagination-focus-box-shadow: $input-btn-focus-box-shadow;
 
 $pagination-hover-color: $link-hover-color;
 $pagination-hover-bg: $gray-200;
-$pagination-hover-border-color: #ddd;
+$pagination-hover-border-color: $gray-300;
 
-$pagination-active-color: $white;
-$pagination-active-bg: theme-color("primary");
-$pagination-active-border-color: theme-color("primary");
+$pagination-active-color: $component-active-color;
+$pagination-active-bg: $component-active-bg;
+$pagination-active-border-color: $pagination-active-bg;
 
 $pagination-disabled-color: $gray-600;
 $pagination-disabled-bg: $white;
-$pagination-disabled-border-color: #ddd;
+$pagination-disabled-border-color: $gray-300;
 
 // Jumbotron
 
@@ -652,9 +664,11 @@ $card-columns-margin: $card-spacer-y;
 
 // Tooltips
 
+$tooltip-font-size: $font-size-sm;
 $tooltip-max-width: 200px;
 $tooltip-color: $white;
 $tooltip-bg: $gray-700;
+$tooltip-border-radius: $border-radius;
 $tooltip-opacity: 1;
 $tooltip-padding-y: 3px;
 $tooltip-padding-x: 8px;
@@ -665,11 +679,13 @@ $tooltip-arrow-color: $tooltip-bg;
 
 // Popovers
 
+$popover-font-size: $font-size-sm;
 $popover-inner-padding: 1px;
 $popover-bg: $white;
 $popover-max-width: 276px;
 $popover-border-width: $border-width;
 $popover-border-color: rgba($black, .2);
+$popover-border-radius: $border-radius-lg;
 $popover-box-shadow: 0 5px 10px rgba($black, .2);
 
 $popover-header-bg: darken($popover-bg, 3%);
@@ -743,6 +759,10 @@ $alert-border-radius: $border-radius;
 $alert-link-font-weight: $font-weight-bold;
 $alert-border-width: $border-width;
 
+$alert-bg-level: -10;
+$alert-border-level: -9;
+$alert-color-level: 6;
+
 // Toasts
 //
 // Define toast colors, border radius, and padding.
@@ -794,7 +814,7 @@ $list-group-action-active-bg: $gray-200;
 $thumbnail-padding: .25rem;
 $thumbnail-bg: $body-bg;
 $thumbnail-border-width: $border-width;
-$thumbnail-border-color: #ddd;
+$thumbnail-border-color: $gray-300;
 $thumbnail-border-radius: $border-radius;
 $thumbnail-box-shadow: 0 1px 2px rgba($black, .075);
 $thumbnail-transition: all .2s ease-in-out;
@@ -866,3 +886,7 @@ $kbd-bg: $gray-900;
 
 $pre-color: $gray-900;
 $pre-scrollable-max-height: 340px;
+
+// Printing
+$print-page-size: a3;
+$print-body-min-width: map-get($grid-breakpoints, "lg");
