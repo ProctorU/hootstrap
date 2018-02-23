@@ -597,6 +597,12 @@ $navbar-light-toggler-icon-bg: str-replace(
 );
 $navbar-light-toggler-border-color: rgba($black, .1);
 
+// Page Header
+
+$page-header-margin-y: 3rem;
+$page-title-color: inherit;
+$page-subtitle-color: $gray-600;
+
 // Pagination
 
 $pagination-padding-y: .5rem;
