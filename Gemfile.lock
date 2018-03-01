@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    hootstrap (0.1.7)
+    hootstrap (0.2.0)
       bootstrap (~> 4.0.0.beta)
       rails (>= 4.2.0)
       sass-rails
@@ -58,7 +58,7 @@ GEM
     crass (1.0.3)
     erubi (1.7.0)
     execjs (2.7.0)
-    ffi (1.9.22)
+    ffi (1.9.23)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (0.9.5)
@@ -77,7 +77,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     popper_js (1.12.9)
     rack (2.0.4)
-    rack-test (0.8.2)
+    rack-test (0.8.3)
       rack (>= 1.0, < 3)
     rails (5.1.5)
       actioncable (= 5.1.5)
