@@ -7,12 +7,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+### Added
+
+* No changes.
+
 ### Changed
+
+* No changes.
+
+### Removed
+
+* No changes.
+
+## 0.3.0 - 2018-03-19
 
 * Bump Bootstrap from alpha to official release. [#24](https://github.com/ProctorU/hootstrap/pull/24)
 * Remove the `gradient` flag. [#24](https://github.com/ProctorU/hootstrap/pull/24)
 
-## 0.2.0 - 2017-02-28
+## 0.2.0 - 2018-02-28
 
 ### Added
 
@@ -26,7 +38,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 * No removals.
 
-## 0.1.7 - 2017-02-23
+## 0.1.7 - 2018-02-23
 
 ### Added
 
