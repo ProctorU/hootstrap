@@ -43,7 +43,7 @@
     </a>
   
     <a href="https://proctoru.github.io/hootstrap/content/buttons"
-      class="list-group-item list-group-item-action active">
+      class="list-group-item list-group-item-action ">
       Buttons
     </a>
   
@@ -63,7 +63,7 @@
     </a>
   
     <a href="https://proctoru.github.io/hootstrap/content/toasts"
-      class="list-group-item list-group-item-action ">
+      class="list-group-item list-group-item-action active">
       Toasts
     </a>
   
@@ -79,134 +79,128 @@
         <div class="col-md-8">
           <div class="page-header text-left pt-0">
             <h4 class="page-title">
-              Buttons
+              Toasts
             </h4>
 
-            <h6 class="page-subtitle">Buttons are used for actions, like in forms, while textual hyperlinks are used for destinations, or moving from one page to another.</h6>
+            <h6 class="page-subtitle">Toasts are often used as tooltips/popups to show a message at the top of the screen.</h6>
           </div>
 
-          <h5 id="primary-button">Primary button</h5>
+          <h5 id="toasts">Toasts</h5>
 
-<p>Use the standard <code class="highlighter-rouge">btn btn-primary</code> for form actions and primary page actions.</p>
+<p>The Toast pattern is a Hootstrap designed implementation of a JavaScript
+alert or confirm dialog.</p>
 
-<p>When using the <code class="highlighter-rouge">&lt;button&gt;</code> element, <em>always</em> specify a <code class="highlighter-rouge">type</code>. When using an
-<code class="highlighter-rouge">&lt;a&gt;</code> element, always add <code class="highlighter-rouge">role="button"</code> for accessibility.</p>
+<div class="hootstrap-example mb-3">
+  <div class="toast toast-danger">
+    <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">×</span>
+    </button>
 
-<div class="hootstrap-example">
-  <button type="button" class="btn btn-primary">Primary button</button>
+    <p class="">Are you sure you want to delete this?</p>
+
+    <button type="button" class="btn btn-danger btn-sm" data-behavior="toast-action">
+      OK
+    </button>
+  </div>
 </div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Primary button<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<h5 id="open-with-data-attributes">Open with data-attributes</h5>
 
-<h5 id="secondary-button">Secondary button</h5>
-
-<p>Use the secondary <code class="highlighter-rouge">btn btn-secondary</code> for non-primary page actions, like
-cancelling a form.</p>
+<p>Use the <code class="highlighter-rouge">data-prompt</code> attribute to open a Toast without writing JavaScript.</p>
 
 <div class="hootstrap-example">
-  <button type="button" class="btn btn-secondary">Secondary button</button>
+<button type="button" class="btn btn-danger" data-prompt="Are you sure you want to delete this?">
+  Delete?
+</button>
 </div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>Secondary button<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hootstrap-example"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span>
+    <span class="na">data-prompt=</span><span class="s">"Are you sure you want to delete this?"</span><span class="nt">&gt;</span>
+    Delete?
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h5 id="success-button">Success button</h5>
+<h5 id="open-with-javascript">Open with JavaScript</h5>
 
-<p>Success buttons come second-hand to the natural <code class="highlighter-rouge">primary</code> button, when
-representing a primary page action.</p>
+<p>Use the following JavaScript to initialize a Toast. You can customize the
+color of Toasts via JavaScript.</p>
 
 <div class="hootstrap-example">
-  <button type="button" class="btn btn-success">Success button</button>
+  <div class="toast toast-primary m-0">
+    <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">×</span>
+    </button>
+
+    <p>Are you sure you want to do this?</p>
+
+    <button type="button" class="btn btn-primary btn-sm" data-behavior="toast-action">
+      OK
+    </button>
+  </div>
+
+  <br />
+
+  <div class="toast toast-success m-0">
+    <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">×</span>
+    </button>
+
+    <p>Are you sure you want to do this?</p>
+
+    <button type="button" class="btn btn-success btn-sm" data-behavior="toast-action">
+      OK
+    </button>
+  </div>
+
+  <br />
+
+  <div class="toast toast-danger m-0">
+    <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">×</span>
+    </button>
+
+    <p>Are you sure you want to do this?</p>
+
+    <button type="button" class="btn btn-danger btn-sm" data-behavior="toast-action">
+      OK
+    </button>
+  </div>
+
+  <br />
+
+  <div class="toast toast-warning m-0">
+    <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">×</span>
+    </button>
+
+    <p>Are you sure you want to do this?</p>
+
+    <button type="button" class="btn btn-warning btn-sm" data-behavior="toast-action">
+      OK
+    </button>
+  </div>
 </div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-success"</span><span class="nt">&gt;</span>Success button<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span>
+  <span class="na">message</span><span class="p">:</span> <span class="s1">'Are you sure you want to do this?'</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="s1">'primary'</span>
+<span class="p">});</span>
 
-<h5 id="danger-button">Danger button</h5>
+<span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span>
+  <span class="na">message</span><span class="p">:</span> <span class="s1">'Are you sure you want to do this?'</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="s1">'success'</span>
+<span class="p">});</span>
 
-<p>Danger buttons are always red. They clearly denote the intended action is
-potentially dangerous.</p>
+<span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span>
+  <span class="na">message</span><span class="p">:</span> <span class="s1">'Are you sure you want to do this?'</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="s1">'danger'</span>
+<span class="p">});</span>
 
-<div class="hootstrap-example">
-  <button type="button" class="btn btn-danger">Danger button</button>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Danger button<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<h5 id="warning-button">Warning button</h5>
-
-<p>Warning provide an additional layer of context for actions that could cause
-damaging changes. Use seldomly.</p>
-
-<div class="hootstrap-example">
-  <button type="button" class="btn btn-warning">Warning button</button>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-warning"</span><span class="nt">&gt;</span>Warning button<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<h5 id="disabled-state">Disabled state</h5>
-
-<p>Disable <code class="highlighter-rouge">&lt;button&gt;</code> elements with the boolean disabled attribute and <code class="highlighter-rouge">&lt;a&gt;</code>
-elements with the <code class="highlighter-rouge">.disabled</code> class.</p>
-
-<div class="hootstrap-example">
-  <button type="button" class="btn btn-primary" disabled="">
-    Disabled primary button
-  </button>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-  Disabled primary button
-<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<div class="hootstrap-example">
-  <button type="button" class="btn btn-secondary" disabled="">
-    Disabled secondary button
-  </button>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-  Disabled secondary button
-<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<div class="hootstrap-example">
-  <button type="button" class="btn btn-success" disabled="">
-    Disabled success button
-  </button>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-success"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-  Disabled success button
-<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<div class="hootstrap-example">
-  <button type="button" class="btn btn-danger" disabled="">
-    Disabled danger button
-  </button>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-  Disabled danger button
-<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<div class="hootstrap-example">
-  <button type="button" class="btn btn-warning" disabled="">
-    Disabled warning button
-  </button>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-warning"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-  Disabled warning button
-<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<h5 id="block-buttons">Block buttons</h5>
-
-<p>Create block level buttons, which span the full width of a parent by adding
-the class <code class="highlighter-rouge">.btn-block</code>.</p>
-
-<div class="hootstrap-example">
-  <button type="button" class="btn btn-primary btn-block">Block button</button>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-block"</span><span class="nt">&gt;</span>Block button<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span>
+  <span class="na">message</span><span class="p">:</span> <span class="s1">'Are you sure you want to do this?'</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="s1">'warning'</span>
+<span class="p">});</span></code></pre></figure>
 
 
         </div>
