@@ -1,2 +1,6 @@
 ---
 ---
+
+window.Rails = {
+  stopEverything: function() {}
+}
