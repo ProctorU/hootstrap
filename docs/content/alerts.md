@@ -5,14 +5,14 @@ description: Flash messages, or alerts, inform users of successful or
   pending actions. Use them sparingly. Don’t show more than one at a time.
 ---
 
-#### Default alerts
+##### Default alerts
 
 Alerts are available for any length of text. For proper styling, use one of
 the 5 required contextual classes (e.g., `.alert-success`).
 
 {% for color in site.data.colors %}
 
-<div class="nest-example">
+<div class="hootstrap-example">
   <div class="alert alert-{{ color.name }}" role="alert">
     This is a {{ color.name }} alert.
   </div>
@@ -26,14 +26,14 @@ the 5 required contextual classes (e.g., `.alert-success`).
 
 {% endfor %}
 
-#### Link color
+##### Link color
 
 Use the `.alert-link` utility class to quickly provide matching colored
 links within any alert.
 
 {% for color in site.data.colors %}
 
-<div class="nest-example">
+<div class="hootstrap-example">
   <div class="alert alert-{{ color.name }}" role="alert">
     This is a {{ color.name }} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
   </div>
@@ -47,12 +47,12 @@ links within any alert.
 
 {% endfor %}
 
-#### Additional content
+##### Additional content
 
 Alerts can also contain additional HTML elements like headings, paragraphs and
 dividers.
 
-<div class="nest-example">
+<div class="hootstrap-example">
   <div class="alert alert-primary" role="alert">
     <h4 class="alert-heading">Well done!</h4>
     <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
@@ -70,14 +70,14 @@ dividers.
 </div>
 {% endhighlight %}
 
-#### Dismissing Alerts
+##### Dismissing Alerts
 
 Alerts can also be dismissed by the user by adding the following markup:
 
 - Add the class `alert-dismissible` to your alert.
 - Add the following data attribute to the close element: `data-dismiss="alert"`.
 
-<div class="nest-example">
+<div class="hootstrap-example">
   <div class="alert alert-primary alert-dismissible" role="alert">
     This alert is dismissible!
 

@@ -5,11 +5,11 @@ description: Cards provide a flexible and extensible content container with
   multiple variants and options.
 ---
 
-#### Text and links
+##### Text and links
 
 Links are added and placed next to each other by adding `.card-link` to an `<a>` tag.
 
-<div class="nest-example">
+<div class="hootstrap-example">
   <div class="card">
     <div class="card-body">
       <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -29,11 +29,11 @@ Links are added and placed next to each other by adding `.card-link` to an `<a>`
 </div>
 {% endhighlight %}
 
-#### Card with Media
+##### Card with Media
 
 Cards can easily be integrated with the Media component with the HTML below.
 
-<div class="nest-example">
+<div class="hootstrap-example">
   <div class="card">
     <div class="card-body">
       <div class="media">
@@ -85,11 +85,11 @@ Cards can easily be integrated with the Media component with the HTML below.
 </div>
 {% endhighlight %}
 
-#### Card with Tables
+##### Card with Tables
 
 Like the Media component, cards can also easily be integrated with tables using the HTML below.
 
-<div class="nest-example">
+<div class="hootstrap-example">
   <div class="card card-body">
     <div class="table-responsive">
       <table class="table table-bordered mb-0">
@@ -151,11 +151,11 @@ Like the Media component, cards can also easily be integrated with tables using 
 </div>
 {% endhighlight %}
 
-#### Searching
+##### Searching
 
 Cards also provide a powerful and flexible header to yield your search.
 
-<div class="nest-example">
+<div class="hootstrap-example">
   <div class="card">
     <div class="card-body card-header">
       <form class="search-group">
@@ -187,13 +187,13 @@ Cards also provide a powerful and flexible header to yield your search.
 </div>
 {% endhighlight %}
 
-#### Forms
+##### Forms
 
 If your page needs a form, we recommend nesting the form within a Card
 component to provide a consistent representation across your app. Please
 see the markup below to the best way to accomplish this.
 
-<div class="nest-example">
+<div class="hootstrap-example">
   <div class="card card-body">
     <fieldset class="form-group">
       <label for="name">Your name</label>

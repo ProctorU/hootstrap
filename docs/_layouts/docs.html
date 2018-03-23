@@ -12,11 +12,13 @@
         </div>
 
         <div class="col-md-8">
-          <div class="page-title">
-            {{ page.title }}
-          </div>
+          <div class="page-header text-left pt-0">
+            <h4 class="page-title">
+              {{ page.title }}
+            </h4>
 
-          <p class="lead">{{ page.description }}</p>
+            <h6 class="page-subtitle">{{ page.description }}</h6>
+          </div>
 
           {{ content }}
         </div>

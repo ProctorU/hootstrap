@@ -5,12 +5,12 @@ description: Documentation and examples for badges, our small count and
   labeling component.
 ---
 
-#### Inline text
+##### Inline text
 
 Badges scale to match the size of the immediate parent element by using
 relative font sizing and em units.
 
-<div class="nest-example">
+<div class="hootstrap-example">
   <h1>Example heading <span class="badge badge-secondary">New</span></h1>
   <h2>Example heading <span class="badge badge-secondary">New</span></h2>
   <h3>Example heading <span class="badge badge-secondary">New</span></h3>
@@ -28,12 +28,12 @@ relative font sizing and em units.
 <h6>Example heading <span class="badge badge-secondary">New</span></h6>
 {% endhighlight %}
 
-#### Contextual variations
+##### Contextual variations
 
 Add any of the below mentioned modifier classes to change the appearance of a
 badge.
 
-<div class="nest-example">
+<div class="hootstrap-example">
   <span class="badge badge-primary">Primary</span>
   <span class="badge badge-secondary">Secondary</span>
   <span class="badge badge-success">Success</span>
@@ -55,11 +55,11 @@ badge.
 <span class="badge badge-dark">Dark</span>
 {% endhighlight %}
 
-#### Pill variation
+##### Pill variation
 
 Use the `.badge-pill` modifier class to make badges more rounded.
 
-<div class="nest-example">
+<div class="hootstrap-example">
   <span class="badge badge-pill badge-primary">Primary</span>
   <span class="badge badge-pill badge-secondary">Secondary</span>
   <span class="badge badge-pill badge-success">Success</span>

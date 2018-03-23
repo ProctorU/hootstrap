@@ -8,7 +8,7 @@ layout: home
       <div class="col-md-10">
         <div class="mx-auto d-flex align-items-center pt-3 pb-5">
           <div class="d-flex w-100 text-light">
-            {% include icons/nest.svg width="34" height="34" class="align-middle mr-auto" %}
+            {% include icons/logo.svg width="34" height="34" class="align-middle mr-auto" %}
             <a href="https://github.com/ProctorU/hootstrap" class="text-light p-2">
               GitHub
             </a>
@@ -30,6 +30,7 @@ layout: home
         </div>
       </div>
     </div>
+
   </div>
 </div>
 
@@ -61,6 +62,7 @@ bundle install
 {% highlight js %}
 //= require hootstrap
 {% endhighlight %}
-    </div>
+</div>
+
   </div>
 </div>

@@ -38,15 +38,15 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (6.0.4)
-    autoprefixer-rails (7.2.3)
+    autoprefixer-rails (8.2.0)
       execjs
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
-    bootstrap (4.0.0.beta2.1)
+    bootstrap (4.0.0)
       autoprefixer-rails (>= 6.0.3)
-      popper_js (>= 1.12.3, < 2)
+      popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
     builder (3.2.3)
     coffee-script (2.4.1)
@@ -122,8 +122,8 @@ GEM
       typhoeus (~> 0.7)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    hootstrap (0.1.6)
-      bootstrap (~> 4.0.0.beta)
+    hootstrap (0.3.0)
+      bootstrap (~> 4.0)
       rails (>= 4.2.0)
       sass-rails
     html-pipeline (2.7.1)
@@ -251,7 +251,7 @@ GEM
     listen (3.0.6)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9.7)
-    loofah (2.1.1)
+    loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -270,7 +270,7 @@ GEM
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.0)
       forwardable-extended (~> 2.6)
-    popper_js (1.12.5)
+    popper_js (1.12.9)
     public_suffix (2.0.5)
     rack (1.6.8)
     rack-test (0.6.3)
@@ -288,18 +288,18 @@ GEM
       sprockets-rails
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
-    rails-dom-testing (1.0.8)
-      activesupport (>= 4.2.0.beta, < 5.0)
+    rails-dom-testing (1.0.9)
+      activesupport (>= 4.2.0, < 5.0)
       nokogiri (~> 1.6)
       rails-deprecated_sanitizer (>= 1.0.1)
-    rails-html-sanitizer (1.0.3)
-      loofah (~> 2.0)
+    rails-html-sanitizer (1.0.4)
+      loofah (~> 2.2, >= 2.2.2)
     railties (4.2.9)
       actionpack (= 4.2.9)
       activesupport (= 4.2.9)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (12.3.0)
+    rake (12.3.1)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -345,10 +345,10 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  hootstrap (~> 0.1.6)
+  hootstrap (~> 0.3.0)
   jekyll
   jekyll-assets
   jekyll-babel
 
 BUNDLED WITH
-   1.15.4
+   1.16.1
