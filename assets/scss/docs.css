@@ -1,27 +1,19 @@
-.page-title {
-  border-bottom: 1px solid #e9ecef;
-  font-size: 2em;
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  padding-bottom: 0.3em; }
-
-.nest-example {
+.hootstrap-example {
   background-color: #fff;
   border-radius: .25rem .25rem 0 0;
   border: 1px solid #e9ecef;
   padding: 1rem;
   position: relative; }
 
-.nest-example::before,
-.nest-example::after {
+.hootstrap-example::before,
+.hootstrap-example::after {
   content: "";
   display: table; }
 
-.nest-example .alert {
+.hootstrap-example .alert {
   margin-bottom: 0; }
 
-.nest-example + .highlight {
+.hootstrap-example + .highlight {
   background-color: #fff;
   border-radius: 0 0 .25rem .25rem;
   border: 1px solid #e9ecef;
