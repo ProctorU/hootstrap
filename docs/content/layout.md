@@ -50,7 +50,7 @@ The Page Header pattern can also be used with actionable elements like buttons.
     <h4 class="page-title">Kittens</h4>
     <h6 class="page-subtitle">A man's best friend.</h6>
 
-    <a class="btn btn-primary btn-sm mt-4" href="javascript:void(0);">Find your kitten</a>
+    <a class="btn btn-primary btn-sm mt-4">Find your kitten</a>
   </div>
 </div>
 {% endhighlight %}

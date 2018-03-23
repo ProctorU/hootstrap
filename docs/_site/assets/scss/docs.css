@@ -1,6 +1,6 @@
 .hootstrap-example {
   background-color: #fff;
-  border-radius: .25rem .25rem 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
   border: 1px solid #e9ecef;
   padding: 1rem;
   position: relative; }
@@ -15,10 +15,13 @@
 
 .hootstrap-example + .highlight {
   background-color: #fff;
-  border-radius: 0 0 .25rem .25rem;
+  border-radius: 0 0 0.25rem 0.25rem;
   border: 1px solid #e9ecef;
   margin-bottom: 1rem;
   margin-top: -1px; }
+
+.hootstrap-example [data-toggle="tooltip"] {
+  margin-bottom: 1rem; }
 
 .highlight pre {
   background-color: #fff;

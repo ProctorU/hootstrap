@@ -58,12 +58,12 @@
     </a>
   
     <a href="https://proctoru.github.io/hootstrap/content/layout"
-      class="list-group-item list-group-item-action active">
+      class="list-group-item list-group-item-action ">
       Layout
     </a>
   
     <a href="https://proctoru.github.io/hootstrap/content/tooltips"
-      class="list-group-item list-group-item-action ">
+      class="list-group-item list-group-item-action active">
       Tooltips
     </a>
   
@@ -74,57 +74,108 @@
         <div class="col-md-8">
           <div class="page-header text-left pt-0">
             <h4 class="page-title">
-              Layout
+              Tooltips
             </h4>
 
-            <h6 class="page-subtitle">Useful patterns for structuring page layouts and titles.</h6>
+            <h6 class="page-subtitle">Documentation and examples for adding custom tooltips with CSS.</h6>
           </div>
 
-          <h5 id="page-header">Page Header</h5>
+          <h5 id="tooltips">Tooltips</h5>
 
-<p>The Page Header pattern is used to add titles and subtitles to your pages.</p>
+<p>The Tooltip component is a message that appears when a cursor is positioned
+over an icon, image, hyperlink, or other element in a graphical user interface.</p>
 
-<p>There are two requirements for the page-header component.</p>
-
-<ol>
-  <li>The title <em>must</em> use an <code class="highlighter-rouge">&lt;h4&gt;</code>.</li>
-  <li>The subtitle <em>must</em> use an <code class="highlighter-rouge">&lt;h6&gt;</code>.</li>
-</ol>
+<p>Hootstrap tooltips are CSS-only. They are derived
+from <a href="https://github.com/kazzkiq/balloon.css">balloon.css</a>.</p>
 
 <div class="hootstrap-example">
-  <div class="page-header">
-    <h4 class="page-title">Kittens</h4>
-    <h6 class="page-subtitle">A man's best friend.</h6>
-  </div>
+  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+    Tooltip on top
+  </button>
+
+  <br />
+
+  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top-right" title="Tooltip on top-right">
+    Tooltip on top-right
+  </button>
+
+  <br />
+
+  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+    Tooltip on right
+  </button>
+
+  <br />
+
+  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom-right" title="Tooltip on bottom-right">
+    Tooltip on bottom-right
+  </button>
+
+  <br />
+
+  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+    Tooltip on bottom
+  </button>
+
+  <br />
+
+  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom-left" title="Tooltip on bottom-left">
+    Tooltip on bottom-left
+  </button>
+
+  <br />
+
+  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+    Tooltip on left
+  </button>
+
+  <br />
+
+  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top-left" title="Tooltip on top-left">
+    Tooltip on top-left
+  </button>
 </div>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hootstrap-example"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-header"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"page-title"</span><span class="nt">&gt;</span>Kittens<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"page-subtitle"</span><span class="nt">&gt;</span>A man's best friend.<span class="nt">&lt;/h6&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
+    <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">title=</span><span class="s">"Tooltip on top"</span><span class="nt">&gt;</span>
+    Tooltip on top
+  <span class="nt">&lt;/button&gt;</span>
 
-<h5 id="with-actions">With Actions</h5>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
+    <span class="na">data-placement=</span><span class="s">"top-right"</span> <span class="na">title=</span><span class="s">"Tooltip on top-right"</span><span class="nt">&gt;</span>
+    Tooltip on top-right
+  <span class="nt">&lt;/button&gt;</span>
 
-<p>The Page Header pattern can also be used with actionable elements like buttons.</p>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
+    <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">title=</span><span class="s">"Tooltip on right"</span><span class="nt">&gt;</span>
+    Tooltip on right
+  <span class="nt">&lt;/button&gt;</span>
 
-<div class="hootstrap-example">
-  <div class="page-header">
-    <h4 class="page-title">Kittens</h4>
-    <h6 class="page-subtitle">A man's best friend.</h6>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
+    <span class="na">data-placement=</span><span class="s">"bottom-right"</span> <span class="na">title=</span><span class="s">"Tooltip on bottom-right"</span><span class="nt">&gt;</span>
+    Tooltip on bottom-right
+  <span class="nt">&lt;/button&gt;</span>
 
-    <a class="btn btn-primary btn-sm mt-4" href="javascript:void(0);">Find your kitten</a>
-  </div>
-</div>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
+    <span class="na">data-placement=</span><span class="s">"bottom"</span> <span class="na">title=</span><span class="s">"Tooltip on bottom"</span><span class="nt">&gt;</span>
+    Tooltip on bottom
+  <span class="nt">&lt;/button&gt;</span>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hootstrap-example"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-header"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"page-title"</span><span class="nt">&gt;</span>Kittens<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"page-subtitle"</span><span class="nt">&gt;</span>A man's best friend.<span class="nt">&lt;/h6&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
+    <span class="na">data-placement=</span><span class="s">"bottom-left"</span> <span class="na">title=</span><span class="s">"Tooltip on bottom-left"</span><span class="nt">&gt;</span>
+    Tooltip on bottom-left
+  <span class="nt">&lt;/button&gt;</span>
 
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm mt-4"</span><span class="nt">&gt;</span>Find your kitten<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
+    <span class="na">data-placement=</span><span class="s">"left"</span> <span class="na">title=</span><span class="s">"Tooltip on left"</span><span class="nt">&gt;</span>
+    Tooltip on left
+  <span class="nt">&lt;/button&gt;</span>
+
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
+    <span class="na">data-placement=</span><span class="s">"top-left"</span> <span class="na">title=</span><span class="s">"Tooltip on top-left"</span><span class="nt">&gt;</span>
+    Tooltip on top-left
+  <span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 

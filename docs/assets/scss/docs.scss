@@ -1,4 +1,7 @@
---- --- .hootstrap-example {
+---
+---
+
+.hootstrap-example {
   background-color: #fff;
   border-radius: 0.25rem 0.25rem 0 0;
   border: 1px solid #e9ecef;
@@ -22,6 +25,10 @@
   border: 1px solid #e9ecef;
   margin-bottom: 1rem;
   margin-top: -1px;
+}
+
+.hootstrap-example [data-toggle="tooltip"] {
+  margin-bottom: 1rem;
 }
 
 .highlight pre {
