@@ -1,6 +1,6 @@
 {
   "name": "hootstrap",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "The CSS framework that powers ProctorU's front-end design.",
   "repository": "git@github.com:ProctorU/hootstrap.git",
   "author": "Justin Licata <licata.justin@gmail.com>",
