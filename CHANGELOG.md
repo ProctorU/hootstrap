@@ -19,6 +19,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 * No changes.
 
+## 0.3.1 - 2018-07-10
+
+### Added
+
+* Update documentation with [Page Header](https://github.com/ProctorU/hootstrap/commit/206563e490f252f37ce7a6965345ee75375b78a6), [Tooltips](Add tooltips to documentation), and [Toasts](https://github.com/ProctorU/hootstrap/commit/561a622efe3edbc60ed8dd0fe57d80aba4bf5d55).
+
+### Changed
+
+* Bump `rails-html-sanitizer`. [#26](https://github.com/ProctorU/hootstrap/commit/24466040df1aba46e985c5c4977d4bb20576fc11)
+* Bump `sprockets`. [#30](https://github.com/ProctorU/hootstrap/commit/15a18716cdaac960154d6dff7fbb3dc498c3a23f)
+* Bump `nokogiri`. [#31](https://github.com/ProctorU/hootstrap/commit/a7c89358fbc4ed9ec49261d3174b58d82499b35a)
+
 ## 0.3.0 - 2018-03-19
 
 * Bump Bootstrap from alpha to official release. [#24](https://github.com/ProctorU/hootstrap/pull/24)

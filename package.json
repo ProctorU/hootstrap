@@ -1,6 +1,6 @@
 {
   "name": "hootstrap",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "description": "The CSS framework that powers ProctorU's front-end design.",
   "repository": "git@github.com:ProctorU/hootstrap.git",
   "author": "Justin Licata <licata.justin@gmail.com>",
@@ -8,6 +8,7 @@
   "scripts": {
     "jekyll": "cd docs && bundle exec jekyll serve",
     "build-docs": "cd docs && bundle exec jekyll build JEKYLL_ENV=production",
-    "deploy-docs": "git push origin :gh-pages && git subtree push --prefix docs/_site origin gh-pages"
+    "deploy-docs":
+      "git push origin :gh-pages && git subtree push --prefix docs/_site origin gh-pages"
   }
 }
