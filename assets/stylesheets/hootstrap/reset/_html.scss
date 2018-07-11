@@ -3,7 +3,12 @@ html {
   min-height: 100%;
 }
 
-body {
-  -webkit-font-smoothing: antialiased;
+html,
+body,
+input,
+button,
+select,
+textarea {
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
