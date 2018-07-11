@@ -2,3 +2,13 @@ html {
   position: relative;
   min-height: 100%;
 }
+
+html,
+body,
+input,
+button,
+select,
+textarea {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
