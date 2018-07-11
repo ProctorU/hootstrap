@@ -64,7 +64,7 @@ document.addEventListener(HootstrapEvent, () => {
   }
 
   function handleKeyup(event) {
-    if (activeDropdown.dropdown && event.keyCode == 27) {
+    if (event.keyCode == 27) {
       closeDropdown({ focus: true });
     }
   }
