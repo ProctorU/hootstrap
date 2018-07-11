@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-* No changes.
+* Font smoothing support [#32](https://github.com/ProctorU/hootstrap/pull/32)
 
 ### Changed
 
