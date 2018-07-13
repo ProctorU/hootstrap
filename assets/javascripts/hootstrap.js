@@ -3,3 +3,4 @@
 //= require hootstrap/modal
 //= require hootstrap/rails
 //= require hootstrap/toast
+//= require hootstrap/turbolinks-progress-bar

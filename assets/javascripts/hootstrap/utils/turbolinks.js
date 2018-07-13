@@ -1,5 +1,8 @@
+const turbolinksEnabled =
+  window.Turbolinks != null && window.Turbolinks.supported;
+
 function checkTurbolinks() {
-  if (window.Turbolinks != null && window.Turbolinks.supported) {
+  if (turbolinksEnabled) {
     if (window.Turbolinks.EVENTS != null) {
       return 'page:change';
     } else {
@@ -10,4 +13,7 @@ function checkTurbolinks() {
   }
 }
 
-window.HootstrapEvent = checkTurbolinks();
+window.Hootstrap = {
+  turbolinks: turbolinksEnabled,
+  event: checkTurbolinks()
+};

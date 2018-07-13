@@ -1,7 +1,7 @@
 //= require ./utils/dynamicListener
 //= require ./utils/turbolinks
 
-document.addEventListener(HootstrapEvent, () => {
+document.addEventListener(Hootstrap.event, () => {
   let activeDropdown = {};
 
   addDynamicEventListener(
