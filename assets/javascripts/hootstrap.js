@@ -1,4 +1,5 @@
 //= require hootstrap/alerts
+//= require hootstrap/dropdown
 //= require hootstrap/modal
 //= require hootstrap/rails
 //= require hootstrap/toast
