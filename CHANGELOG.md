@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- No changes.
+- Add Turbolinks progress bar [#36](https://github.com/ProctorU/hootstrap/pull/36)
 
 ### Changed
 
