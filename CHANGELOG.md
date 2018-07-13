@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 * Font smoothing support [#32](https://github.com/ProctorU/hootstrap/pull/32)
+* Add dropdown support [#33](https://github.com/ProctorU/hootstrap/pull/33)
 
 ### Changed
 
