@@ -1,8 +1,7 @@
 //= require ./utils/closest
 //= require ./utils/dynamicListener
-//= require ./utils/turbolinks
 
-document.addEventListener(Hootstrap.event, () => {
+document.addEventListener(Hootstrap.turbolinks.event, () => {
   addDynamicEventListener(
     document.body,
     'click',

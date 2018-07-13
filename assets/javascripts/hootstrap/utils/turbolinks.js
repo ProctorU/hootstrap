@@ -14,6 +14,8 @@ function checkTurbolinks() {
 }
 
 window.Hootstrap = {
-  turbolinks: turbolinksEnabled,
-  event: checkTurbolinks()
+  turbolinks: {
+    enabled: turbolinksEnabled,
+    event: checkTurbolinks()
+  }
 };
