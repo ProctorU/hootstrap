@@ -9,7 +9,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- No changes.
+
+### Changed
+
+- No changes.
+
+### Removed
+
+- No changes.
+
+## 0.5.0 - 2018-07-26
+
+### Added
+
 - Add Turbolinks progress bar [#36](https://github.com/ProctorU/hootstrap/pull/36)
+- Add Page Actions [#38](https://github.com/ProctorU/hootstrap/pull/38)
 
 ### Changed
 
