@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    hootstrap (0.4.0)
+    hootstrap (0.5.0)
       bootstrap (~> 4.0.0)
       rails (>= 4.2.0)
       sass-rails
@@ -51,7 +51,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (9.0.0)
-    autoprefixer-rails (8.6.5)
+    autoprefixer-rails (9.0.0)
       execjs
     bootstrap (4.0.0)
       autoprefixer-rails (>= 6.0.3)
@@ -82,9 +82,9 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
-    popper_js (1.12.9)
+    popper_js (1.14.3)
     rack (2.0.5)
-    rack-test (1.0.0)
+    rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.0)
       actioncable (= 5.2.0)
@@ -114,7 +114,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    sass (3.5.6)
+    sass (3.5.7)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
