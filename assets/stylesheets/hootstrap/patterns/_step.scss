@@ -1,0 +1,75 @@
+.steps {
+  display: flex;
+  margin: 0; // reset <ol>
+  padding: 0; // reset <ol>
+}
+
+.step {
+  display: block;
+  flex: 1;
+  list-style: none;
+  text-align: center;
+  position: relative;
+  width: auto;
+}
+
+.step-bubble {
+  background-color: $step-color;
+  border-radius: $step-bubble-border-radius;
+  box-shadow: 0 0 0 0.2rem rgba($step-color, 0.25);
+  height: $step-bubble-size;
+  margin: 0 auto $spacer;
+  width: $step-bubble-size;
+
+  &::before,
+  &::after {
+    background-color: $step-color;
+    display: block;
+    position: absolute;
+    top: ($spacer / 2) - ($step-line-height / 2);
+    width: 100%;
+    height: $step-line-height;
+    content: '';
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+.step.active .step-bubble {
+  box-shadow: 0 0 0 0.2rem $step-color, 0 0 0 0.4rem rgba($step-color, 0.25);
+}
+
+// Handle first and last Step
+.step:first-child .step-bubble::before,
+.step:first-child .step-bubble::after {
+  width: 50%;
+  margin-left: 50%;
+}
+
+.step:last-child .step-bubble::before,
+.step:last-child .step-bubble::after {
+  width: 50%;
+  margin-right: 50%;
+}
+
+// Handle contextual colors
+
+.step.step-primary {
+  color: $step-primary-color;
+
+  .step-bubble {
+    background-color: $step-primary-color;
+    box-shadow: 0 0 0 0.2rem rgba($step-primary-color, 0.25);
+
+    &::before,
+    &::after {
+      background-color: $step-primary-color;
+    }
+  }
+}
