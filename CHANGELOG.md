@@ -19,6 +19,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - No changes.
 
+## 0.6.0 - 2018-08-13
+
+### Added
+
+- Steps pattern for wizards [#41](https://github.com/ProctorU/hootstrap/pull/41).
+
+### Changed
+
+- No changes.
+
+### Removed
+
+- No changes.
+
 ## 0.5.1 - 2018-08-13
 
 ### Added
