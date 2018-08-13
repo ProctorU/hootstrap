@@ -19,6 +19,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - No changes.
 
+## 0.5.1 - 2018-08-13
+
+### Added
+
+- No changes.
+
+### Changed
+
+- Fix height of button to match inputs [#42](https://github.com/ProctorU/hootstrap/pull/42)
+
+### Removed
+
+- No changes.
+
 ## 0.5.0 - 2018-07-26
 
 ### Added
