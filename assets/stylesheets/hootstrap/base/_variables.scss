@@ -730,8 +730,8 @@ $modal-content-border-width: $border-width;
 $modal-content-box-shadow-xs: 0 3px 9px rgba($black, .5);
 $modal-content-box-shadow-sm-up: 0 5px 15px rgba($black, .5);
 
-$modal-backdrop-bg: $black;
-$modal-backdrop-opacity: .5;
+$modal-backdrop-bg: $gray-100;
+$modal-backdrop-opacity: 1;
 $modal-header-border-color: $gray-200;
 $modal-footer-border-color: $modal-header-border-color;
 $modal-header-border-width: $modal-content-border-width;
