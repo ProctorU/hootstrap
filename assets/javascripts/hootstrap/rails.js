@@ -14,11 +14,13 @@ document.addEventListener(Hootstrap.turbolinks.event, () => {
     Rails.stopEverything(event);
 
     const target = event.target;
+    const type = target.getAttribute('data-type');
+    const action = target.getAttribute('data-action');
 
     new Toast({
       message: target.getAttribute('data-prompt'),
-      type: 'danger',
-      action: 'OK',
+      type: type || 'danger',
+      action: action || 'OK',
       onClick: () => {
         confirmed = true;
         target.click();
