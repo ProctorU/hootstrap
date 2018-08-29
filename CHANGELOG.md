@@ -19,6 +19,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - No changes.
 
+## 0.7.0 - 2018-08-29
+
+### Added
+
+- No changes.
+
+### Changed
+
+- Add ability to customize the context and action text of prompts [#43](https://github.com/ProctorU/hootstrap/pull/43).
+
+### Removed
+
+- No changes.
+
 ## 0.6.0 - 2018-08-13
 
 ### Added
