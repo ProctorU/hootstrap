@@ -20,7 +20,7 @@ document.addEventListener(Hootstrap.turbolinks.event, () => {
     new Toast({
       message: target.getAttribute('data-prompt'),
       type: type || 'danger',
-      action: type || 'OK',
+      action: action || 'OK',
       onClick: () => {
         confirmed = true;
         target.click();
