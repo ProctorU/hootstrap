@@ -1,0 +1,42 @@
+.nav-tabs {
+  border: none;
+
+  .nav-item:not(:last-child) {
+    margin-right: $nav-tabs-spacing;
+  }
+
+  .nav-link {
+    color: $body-color;
+    position: relative;
+
+    @include hover-focus {
+      color: $nav-tabs-link-hover-color;
+    }
+
+    &.active,
+    &.active:hover,
+    &.active:focus {
+      color: $nav-tabs-link-active-color;
+    }
+
+    &.disabled,
+    &.disabled:hover,
+    &.disabled:focus {
+      color: $nav-link-disabled-color;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    &::after {
+      background-color: $blue;
+      border-top-left-radius: $nav-tabs-link-border-radius;
+      border-top-right-radius: $nav-tabs-link-border-radius;
+      bottom: 0;
+      content: '';
+      height: 3px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+}
