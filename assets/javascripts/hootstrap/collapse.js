@@ -9,8 +9,8 @@ document.addEventListener(Hootstrap.turbolinks.event, () => {
   );
 
   document.body.addEventListener('click', event => {
-    event.preventDefault();
     if (event.target.parentElement.dataset.toggle === "collapse") {
+      event.preventDefault();
       event.target.parentElement.click();
     }
   });
