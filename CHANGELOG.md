@@ -19,6 +19,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - No changes.
 
+## 0.8.0 - 2018-12-07
+
+### Added
+
+- Added support for navbar-collapse. #47 [Credit: Andrew Fomera - @king601]
+
+### Changed
+
+- No Changes.
+
+### Removed
+
+- No changes.
+
 ## 0.7.0 - 2018-08-29
 
 ### Added
