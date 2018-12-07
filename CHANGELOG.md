@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Added support for navbar-collapse. #47 [Credit: Andrew Fomera - @king601]
+- Added support for navbar-collapse. [#47](https://github.com/ProctorU/hootstrap/pull/47) [Credit: Andrew Fomera - @king601]
 
 ### Changed
 
