@@ -19,6 +19,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - No changes.
 
+## 0.9.0 - 2018-12-07
+
+### Added
+
+- No changes.
+
+### Changed
+
+- Bump support from Bootstrap 4 to Bootstrap 4.1. [#50](https://github.com/ProctorU/hootstrap/pull/50) [Credit: Andrew Fomera - @king601]
+
+### Removed
+
+- No changes.
+
 ## 0.8.0 - 2018-12-07
 
 ### Added
