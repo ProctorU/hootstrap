@@ -6,8 +6,8 @@
 
   <title>Hootstrap</title>
 
-  <link rel="stylesheet" href="https://proctoru.github.io/hootstrap/assets/scss/main.css" />
-  <link rel="stylesheet" href="https://proctoru.github.io/hootstrap/assets/scss/docs.css" />
+  <link rel="stylesheet" href="http://localhost:4000/assets/scss/main.css" />
+  <link rel="stylesheet" href="http://localhost:4000/assets/scss/docs.css" />
 </head>
 
 
@@ -34,7 +34,7 @@
             the <a class="text-light font-weight-bold" href="http://getbootstrap.com">Bootstrap</a> foundation.
           </p>
 
-          <a href="https://proctoru.github.io/hootstrap/content/alerts" class="btn btn-outline-light">
+          <a href="http://localhost:4000/content/alerts" class="btn btn-outline-light">
             View documentation
           </a>
         </div>
@@ -79,7 +79,28 @@
 
 
     <script type="text/javascript">
-  function closest(el, selector) {
+  const turbolinksEnabled =
+  window.Turbolinks != null && window.Turbolinks.supported;
+
+function checkTurbolinks() {
+  if (turbolinksEnabled) {
+    if (window.Turbolinks.EVENTS != null) {
+      return 'page:change';
+    } else {
+      return 'turbolinks:load';
+    }
+  } else {
+    return 'DOMContentLoaded';
+  }
+}
+
+window.Hootstrap = {
+  turbolinks: {
+    enabled: turbolinksEnabled,
+    event: checkTurbolinks()
+  }
+};
+function closest(el, selector) {
   const matchesSelector =
     el.matches ||
     el.webkitMatchesSelector ||
@@ -176,24 +197,10 @@
     );
   };
 })(this);
-function checkTurbolinks() {
-  if (window.Turbolinks != null && window.Turbolinks.supported) {
-    if (window.Turbolinks.EVENTS != null) {
-      return 'page:change';
-    } else {
-      return 'turbolinks:load';
-    }
-  } else {
-    return 'DOMContentLoaded';
-  }
-}
-
-window.HootstrapEvent = checkTurbolinks();
 
 
 
-
-document.addEventListener(HootstrapEvent, () => {
+document.addEventListener(Hootstrap.turbolinks.event, () => {
   addDynamicEventListener(
     document.body,
     'click',
@@ -205,6 +212,106 @@ document.addEventListener(HootstrapEvent, () => {
     const alert = closest(event.target, '.alert');
 
     alert.parentNode.removeChild(alert);
+  }
+});
+
+document.addEventListener(Hootstrap.turbolinks.event, () => {
+  addDynamicEventListener(
+    document.body,
+    'click',
+    '[data-toggle="collapse"]',
+    toggleCollapse
+  );
+
+  document.body.addEventListener('click', event => {
+    if (event.target.parentElement.dataset.toggle === "collapse") {
+      event.preventDefault();
+      event.target.parentElement.click();
+    }
+  });
+
+  function toggleCollapse(event) {
+    event.preventDefault();
+
+    const button = event.target;
+    const target = document.querySelector(button.dataset.target)
+
+    if (target.classList && target.classList.contains('show')) {
+      target.classList.remove('show');
+      target.setAttribute('aria-expanded', 'false');
+    } else {
+      target.classList.add('show');
+      target.setAttribute('aria-expanded', 'true');
+    }
+  }
+});
+
+document.addEventListener(Hootstrap.turbolinks.event, () => {
+  let activeDropdown = {};
+
+  addDynamicEventListener(
+    document.body,
+    'click',
+    '[data-toggle="dropdown"]',
+    openDropdown
+  );
+
+  document.body.addEventListener('click', event => {
+    if (!event.target.classList.contains('dropdown-toggle')) {
+      closeDropdown();
+    }
+  });
+
+  document.addEventListener('keyup', handleKeyup);
+
+  function openDropdown(event) {
+    event.preventDefault();
+
+    const button = event.target;
+    const dropdown = button.parentNode;
+    const children = dropdown.childNodes;
+
+    children.forEach(dropdownMenu => {
+      if (
+        dropdownMenu.classList &&
+        dropdownMenu.classList.contains('dropdown-menu')
+      ) {
+        const cachedActiveDropdown = activeDropdown.dropdown;
+        closeDropdown({ focus: true });
+
+        if (dropdown === cachedActiveDropdown) {
+          return;
+        }
+
+        button.focus();
+        dropdown.classList.add('show');
+        dropdownMenu.classList.add('show');
+        button.setAttribute('aria-expanded', 'true');
+        activeDropdown = {
+          dropdown: dropdown,
+          button: button,
+          dropdownMenu: dropdownMenu
+        };
+      }
+    });
+  }
+
+  function closeDropdown(options = {}) {
+    if (activeDropdown.dropdown) {
+      activeDropdown.dropdown.classList.remove('show');
+      activeDropdown.dropdownMenu.classList.remove('show');
+      activeDropdown.button.setAttribute('aria-expanded', 'false');
+      if (options.focus) {
+        activeDropdown.button.focus();
+      }
+      activeDropdown = {};
+    }
+  }
+
+  function handleKeyup(event) {
+    if (event.keyCode == 27) {
+      closeDropdown({ focus: true });
+    }
   }
 });
 // Copyright (c) 2016, Kane Cohen
@@ -1003,9 +1110,7 @@ var Modal = (function(e) {
   }
 ]);
 
-
-
-document.addEventListener(HootstrapEvent, () => {
+document.addEventListener(Hootstrap.turbolinks.event, () => {
   let confirmed = false;
 
   addDynamicEventListener(document.body, 'click', '[data-prompt]', handleClick);
@@ -1019,11 +1124,13 @@ document.addEventListener(HootstrapEvent, () => {
     Rails.stopEverything(event);
 
     const target = event.target;
+    const type = target.getAttribute('data-type');
+    const action = target.getAttribute('data-action');
 
     new Toast({
       message: target.getAttribute('data-prompt'),
-      type: 'danger',
-      action: 'OK',
+      type: type || 'danger',
+      action: action || 'OK',
       onClick: () => {
         confirmed = true;
         target.click();
@@ -1198,6 +1305,20 @@ Toast.prototype.init = function() {
       this.bindEventListeners();
     });
 };
+// Override Turbolinks default timeout for the progress bar.
+//
+// Shows the Progress Bar after every page change.
+
+if (Hootstrap.turbolinks.enabled) {
+  Turbolinks.BrowserAdapter.prototype.showProgressBarAfterDelay = function() {
+    return (this.progressBarTimeout = setTimeout(this.showProgressBar, 0));
+  };
+}
+;
+
+
+
+
 
 
 
@@ -1205,7 +1326,7 @@ Toast.prototype.init = function() {
 
 </script>
 
-<script src="https://proctoru.github.io/hootstrap/assets/javascripts/docs.js"></script>
+<script src="http://localhost:4000/assets/javascripts/docs.js"></script>
 
   </body>
 </html>
