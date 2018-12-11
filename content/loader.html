@@ -68,7 +68,7 @@
     </a>
   
     <a href="https://proctoru.github.io/hootstrap/content/loader"
-      class="list-group-item list-group-item-action ">
+      class="list-group-item list-group-item-action active">
       Loader
     </a>
   
@@ -83,7 +83,7 @@
     </a>
   
     <a href="https://proctoru.github.io/hootstrap/content/tooltips"
-      class="list-group-item list-group-item-action active">
+      class="list-group-item list-group-item-action ">
       Tooltips
     </a>
   
@@ -94,109 +94,21 @@
         <div class="col-md-8">
           <div class="page-header text-left pt-0">
             <h4 class="page-title">
-              Tooltips
+              Loader
             </h4>
 
-            <h6 class="page-subtitle">Documentation and examples for adding custom tooltips with CSS.</h6>
+            <h6 class="page-subtitle">Loaders are used to represent content that is being loaded from the server.</h6>
           </div>
 
-          <h5 id="tooltips">Tooltips</h5>
-
-<p>The Tooltip component is a message that appears when a cursor is positioned
-over an icon, image, hyperlink, or other element in a graphical user interface.</p>
-
-<p>Hootstrap tooltips are CSS-only. They are derived
-from <a href="https://github.com/kazzkiq/balloon.css">balloon.css</a>.</p>
+          <h5 id="default-loader">Default loader</h5>
 
 <div class="hootstrap-example">
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-    Tooltip on top
-  </button>
-
-  <br />
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top-right" title="Tooltip on top-right">
-    Tooltip on top-right
-  </button>
-
-  <br />
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
-    Tooltip on right
-  </button>
-
-  <br />
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom-right" title="Tooltip on bottom-right">
-    Tooltip on bottom-right
-  </button>
-
-  <br />
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
-    Tooltip on bottom
-  </button>
-
-  <br />
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom-left" title="Tooltip on bottom-left">
-    Tooltip on bottom-left
-  </button>
-
-  <br />
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
-    Tooltip on left
-  </button>
-
-  <br />
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top-left" title="Tooltip on top-left">
-    Tooltip on top-left
-  </button>
+  <div class="loader mx-auto"></div>
 </div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hootstrap-example"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">title=</span><span class="s">"Tooltip on top"</span><span class="nt">&gt;</span>
-    Tooltip on top
-  <span class="nt">&lt;/button&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- add .mx-auto to align middle --&gt;</span>
 
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"top-right"</span> <span class="na">title=</span><span class="s">"Tooltip on top-right"</span><span class="nt">&gt;</span>
-    Tooltip on top-right
-  <span class="nt">&lt;/button&gt;</span>
-
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">title=</span><span class="s">"Tooltip on right"</span><span class="nt">&gt;</span>
-    Tooltip on right
-  <span class="nt">&lt;/button&gt;</span>
-
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"bottom-right"</span> <span class="na">title=</span><span class="s">"Tooltip on bottom-right"</span><span class="nt">&gt;</span>
-    Tooltip on bottom-right
-  <span class="nt">&lt;/button&gt;</span>
-
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"bottom"</span> <span class="na">title=</span><span class="s">"Tooltip on bottom"</span><span class="nt">&gt;</span>
-    Tooltip on bottom
-  <span class="nt">&lt;/button&gt;</span>
-
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"bottom-left"</span> <span class="na">title=</span><span class="s">"Tooltip on bottom-left"</span><span class="nt">&gt;</span>
-    Tooltip on bottom-left
-  <span class="nt">&lt;/button&gt;</span>
-
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"left"</span> <span class="na">title=</span><span class="s">"Tooltip on left"</span><span class="nt">&gt;</span>
-    Tooltip on left
-  <span class="nt">&lt;/button&gt;</span>
-
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"top-left"</span> <span class="na">title=</span><span class="s">"Tooltip on top-left"</span><span class="nt">&gt;</span>
-    Tooltip on top-left
-  <span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"loader"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></figure>
 
 
         </div>
