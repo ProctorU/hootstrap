@@ -73,7 +73,7 @@
     </a>
   
     <a href="https://proctoru.github.io/hootstrap/content/steps"
-      class="list-group-item list-group-item-action ">
+      class="list-group-item list-group-item-action active">
       Steps
     </a>
   
@@ -83,7 +83,7 @@
     </a>
   
     <a href="https://proctoru.github.io/hootstrap/content/tooltips"
-      class="list-group-item list-group-item-action active">
+      class="list-group-item list-group-item-action ">
       Tooltips
     </a>
   
@@ -94,109 +94,130 @@
         <div class="col-md-8">
           <div class="page-header text-left pt-0">
             <h4 class="page-title">
-              Tooltips
+              Steps
             </h4>
 
-            <h6 class="page-subtitle">Documentation and examples for adding custom tooltips with CSS.</h6>
+            <h6 class="page-subtitle">Steps provide a wizard-like interview to display progress of a multi-step form.</h6>
           </div>
 
-          <h5 id="tooltips">Tooltips</h5>
+          <h5 id="markup">Markup</h5>
 
-<p>The Tooltip component is a message that appears when a cursor is positioned
-over an icon, image, hyperlink, or other element in a graphical user interface.</p>
-
-<p>Hootstrap tooltips are CSS-only. They are derived
-from <a href="https://github.com/kazzkiq/balloon.css">balloon.css</a>.</p>
+<p>The Steps pattern is built from simple ordered lists. Each list item has a base
+class of <code class="highlighter-rouge">step</code>, followed with a contextual class like <code class="highlighter-rouge">step-primary</code> or <code class="highlighter-rouge">active</code>.</p>
 
 <div class="hootstrap-example">
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-    Tooltip on top
-  </button>
-
-  <br />
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top-right" title="Tooltip on top-right">
-    Tooltip on top-right
-  </button>
-
-  <br />
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
-    Tooltip on right
-  </button>
-
-  <br />
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom-right" title="Tooltip on bottom-right">
-    Tooltip on bottom-right
-  </button>
-
-  <br />
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
-    Tooltip on bottom
-  </button>
-
-  <br />
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom-left" title="Tooltip on bottom-left">
-    Tooltip on bottom-left
-  </button>
-
-  <br />
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
-    Tooltip on left
-  </button>
-
-  <br />
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top-left" title="Tooltip on top-left">
-    Tooltip on top-left
-  </button>
+  <ol class="steps">
+    <li class="step step-primary">
+      <div class="step-bubble"></div>
+      First step
+    </li>
+    <li class="step step-primary">
+      <div class="step-bubble"></div>
+      Second step
+    </li>
+    <li class="step active">
+      <div class="step-bubble"></div>
+      Third step
+    </li>
+    <li class="step">
+      <div class="step-bubble"></div>
+      Fourth step
+    </li>
+  </ol>
 </div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hootstrap-example"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">title=</span><span class="s">"Tooltip on top"</span><span class="nt">&gt;</span>
-    Tooltip on top
-  <span class="nt">&lt;/button&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"steps"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step step-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-bubble"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    First step
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step step-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-bubble"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    Second step
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step active"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-bubble"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    Third step
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-bubble"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    Fourth step
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span></code></pre></figure>
 
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"top-right"</span> <span class="na">title=</span><span class="s">"Tooltip on top-right"</span><span class="nt">&gt;</span>
-    Tooltip on top-right
-  <span class="nt">&lt;/button&gt;</span>
+<h5 id="completed-steps">Completed Steps</h5>
 
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">title=</span><span class="s">"Tooltip on right"</span><span class="nt">&gt;</span>
-    Tooltip on right
-  <span class="nt">&lt;/button&gt;</span>
+<p>Use the list item class of <code class="highlighter-rouge">step-primary</code> to contextual represent a completed step.</p>
 
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"bottom-right"</span> <span class="na">title=</span><span class="s">"Tooltip on bottom-right"</span><span class="nt">&gt;</span>
-    Tooltip on bottom-right
-  <span class="nt">&lt;/button&gt;</span>
+<div class="hootstrap-example">
+  <ol class="steps">
+    <li class="step step-primary">
+      <div class="step-bubble"></div>
+      First step
+    </li>
+    <li class="step step-primary">
+      <div class="step-bubble"></div>
+      Second step
+    </li>
+    <li class="step step-primary">
+      <div class="step-bubble"></div>
+      Third step
+    </li>
+    <li class="step step-primary">
+      <div class="step-bubble"></div>
+      Fourth step
+    </li>
+  </ol>
+</div>
 
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"bottom"</span> <span class="na">title=</span><span class="s">"Tooltip on bottom"</span><span class="nt">&gt;</span>
-    Tooltip on bottom
-  <span class="nt">&lt;/button&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"steps"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step step-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-bubble"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    First step
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step step-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-bubble"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    Second step
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step step-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-bubble"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    Third step
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step step-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-bubble"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    Fourth step
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span></code></pre></figure>
 
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"bottom-left"</span> <span class="na">title=</span><span class="s">"Tooltip on bottom-left"</span><span class="nt">&gt;</span>
-    Tooltip on bottom-left
-  <span class="nt">&lt;/button&gt;</span>
+<h5 id="active-step">Active Step</h5>
 
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"left"</span> <span class="na">title=</span><span class="s">"Tooltip on left"</span><span class="nt">&gt;</span>
-    Tooltip on left
-  <span class="nt">&lt;/button&gt;</span>
+<p>Use the list item class of <code class="highlighter-rouge">active</code> to contextual represent a step that is currently
+being completed. The only difference between an incomplete step and an active
+step is the size of the <code class="highlighter-rouge">step-bubble</code>.</p>
 
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span>
-    <span class="na">data-placement=</span><span class="s">"top-left"</span> <span class="na">title=</span><span class="s">"Tooltip on top-left"</span><span class="nt">&gt;</span>
-    Tooltip on top-left
-  <span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<div class="hootstrap-example">
+  <ol class="steps">
+    <li class="step active">
+      <div class="step-bubble"></div>
+      Active step
+    </li>
+    <li class="step">
+      <div class="step-bubble"></div>
+      Second step
+    </li>
+  </ol>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"steps"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step active"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-bubble"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    Active step
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-bubble"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    Second step
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span></code></pre></figure>
 
 
         </div>
