@@ -19,6 +19,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - No changes.
 
+## 0.10.0 - 2018-12-14
+
+### Added
+
+- No changes.
+
+### Changed
+
+- Increase $gray-600 contrast against white [#58](https://github.com/ProctorU/hootstrap/pull/58) [Credit: Justin Licata @licatajustin]
+
+### Removed
+
+- No changes.
+
 ## 0.9.0 - 2018-12-07
 
 ### Added
