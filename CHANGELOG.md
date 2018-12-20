@@ -19,6 +19,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - No changes.
 
+## 0.11.0 - 2018-12-20
+
+### Added
+
+- No changes.
+
+### Changed
+
+- Changed Gem Authors [#59](https://github.com/ProctorU/hootstrap/pull/59) [Credit: Justin Licata @licatajustin]
+
+### Removed
+
+- No changes.
+
+
 ## 0.10.0 - 2018-12-14
 
 ### Added
