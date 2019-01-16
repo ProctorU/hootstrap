@@ -78,7 +78,7 @@
     </a>
   
     <a href="http://localhost:4000/content/toasts"
-      class="list-group-item list-group-item-action active">
+      class="list-group-item list-group-item-action ">
       Toasts
     </a>
   
@@ -88,7 +88,7 @@
     </a>
   
     <a href="http://localhost:4000/content/navs"
-      class="list-group-item list-group-item-action ">
+      class="list-group-item list-group-item-action active">
       Navs
     </a>
   
@@ -99,128 +99,116 @@
         <div class="col-md-8">
           <div class="page-header text-left pt-0">
             <h4 class="page-title">
-              Toasts
+              Navs
             </h4>
 
-            <h6 class="page-subtitle">Toasts are often used as tooltips/popups to show a message at the top of the screen.</h6>
+            <h6 class="page-subtitle">Documentation and examples for how to use Hootstrap's included Navigation.</h6>
           </div>
 
-          <h5 id="toasts">Toasts</h5>
+          <h5 id="regarding-accessibility">Regarding Accessibility</h5>
+<p>If you’re using navs to provide a navigation bar, be sure to add a <code class="highlighter-rouge">role="navigation"</code> to the most logical parent container of the <code class="highlighter-rouge">&lt;ul&gt;</code>, or wrap a <code class="highlighter-rouge">&lt;nav&gt;</code> element around the whole navigation. Do not add the role to the <code class="highlighter-rouge">&lt;ul&gt;</code> itself, as this would prevent it from being announced as an actual list by assistive technologies.</p>
 
-<p>The Toast pattern is a Hootstrap designed implementation of a JavaScript
-alert or confirm dialog.</p>
+<p>Note that navigation bars, even if visually styled as tabs with the <code class="highlighter-rouge">.nav-tabs</code> class, should not be given <code class="highlighter-rouge">role="tablist"</code>, <code class="highlighter-rouge">role="tab"</code> or <code class="highlighter-rouge">role="tabpanel"</code> attributes. These are only appropriate for dynamic tabbed interfaces, as described in the WAI ARIA Authoring Practices.</p>
 
-<div class="hootstrap-example mb-3">
-  <div class="toast toast-danger">
-    <button type="button" class="close" data-dismiss="toast" aria-label="Close">
-      <span aria-hidden="true">×</span>
-    </button>
+<h5 id="nav-tabs">Nav Tabs</h5>
 
-    <p class="">Are you sure you want to delete this?</p>
-
-    <button type="button" class="btn btn-danger btn-sm" data-behavior="toast-action">
-      OK
-    </button>
-  </div>
-</div>
-
-<h5 id="open-with-data-attributes">Open with data-attributes</h5>
-
-<p>Use the <code class="highlighter-rouge">data-prompt</code> attribute to open a Toast without writing JavaScript.</p>
+<p>Nav Tabs can be used like so, where the css class added is <code class="highlighter-rouge">nav-tabs</code> within a <code class="highlighter-rouge">ul</code>.</p>
 
 <div class="hootstrap-example">
-<button type="button" class="btn btn-danger" data-prompt="Are you sure you want to delete this?">
-  Delete?
-</button>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>
 </div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hootstrap-example"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span>
-    <span class="na">data-prompt=</span><span class="s">"Are you sure you want to delete this?"</span><span class="nt">&gt;</span>
-    Delete?
-  <span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link disabled"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<h5 id="open-with-javascript">Open with JavaScript</h5>
+<h5 id="fill-and-justify">Fill and Justify</h5>
 
-<p>Use the following JavaScript to initialize a Toast. You can customize the
-color of Toasts via JavaScript.</p>
+<p>Nav Tabs can be made to fill up the entire width of the parent container using <code class="highlighter-rouge">.nav-fill</code>. Notice that all horizontal space is occupied, but not every nav item has the same width.</p>
 
 <div class="hootstrap-example">
-  <div class="toast toast-primary m-0">
-    <button type="button" class="close" data-dismiss="toast" aria-label="Close">
-      <span aria-hidden="true">×</span>
-    </button>
-
-    <p>Are you sure you want to do this?</p>
-
-    <button type="button" class="btn btn-primary btn-sm" data-behavior="toast-action">
-      OK
-    </button>
-  </div>
-
-  <br />
-
-  <div class="toast toast-success m-0">
-    <button type="button" class="close" data-dismiss="toast" aria-label="Close">
-      <span aria-hidden="true">×</span>
-    </button>
-
-    <p>Are you sure you want to do this?</p>
-
-    <button type="button" class="btn btn-success btn-sm" data-behavior="toast-action">
-      OK
-    </button>
-  </div>
-
-  <br />
-
-  <div class="toast toast-danger m-0">
-    <button type="button" class="close" data-dismiss="toast" aria-label="Close">
-      <span aria-hidden="true">×</span>
-    </button>
-
-    <p>Are you sure you want to do this?</p>
-
-    <button type="button" class="btn btn-danger btn-sm" data-behavior="toast-action">
-      OK
-    </button>
-  </div>
-
-  <br />
-
-  <div class="toast toast-warning m-0">
-    <button type="button" class="close" data-dismiss="toast" aria-label="Close">
-      <span aria-hidden="true">×</span>
-    </button>
-
-    <p>Are you sure you want to do this?</p>
-
-    <button type="button" class="btn btn-warning btn-sm" data-behavior="toast-action">
-      OK
-    </button>
-  </div>
+  <ul class="nav nav-tabs nav-fill">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Super Long Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>
 </div>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span>
-  <span class="na">message</span><span class="p">:</span> <span class="s1">'Are you sure you want to do this?'</span><span class="p">,</span>
-  <span class="na">type</span><span class="p">:</span> <span class="s1">'primary'</span>
-<span class="p">});</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs nav-fill"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Super Long Link<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link disabled"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span>
-  <span class="na">message</span><span class="p">:</span> <span class="s1">'Are you sure you want to do this?'</span><span class="p">,</span>
-  <span class="na">type</span><span class="p">:</span> <span class="s1">'success'</span>
-<span class="p">});</span>
+<p>We can ensure every item has the same width by using <code class="highlighter-rouge">.nav-justified</code> instead.</p>
 
-<span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span>
-  <span class="na">message</span><span class="p">:</span> <span class="s1">'Are you sure you want to do this?'</span><span class="p">,</span>
-  <span class="na">type</span><span class="p">:</span> <span class="s1">'danger'</span>
-<span class="p">});</span>
+<div class="hootstrap-example">
+  <ul class="nav nav-tabs nav-justified">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">This Link is longer!</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>
+</div>
 
-<span class="k">new</span> <span class="nx">Toast</span><span class="p">({</span>
-  <span class="na">message</span><span class="p">:</span> <span class="s1">'Are you sure you want to do this?'</span><span class="p">,</span>
-  <span class="na">type</span><span class="p">:</span> <span class="s1">'warning'</span>
-<span class="p">});</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs nav-justified"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>This Link is longer!<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link disabled"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
 
         </div>
