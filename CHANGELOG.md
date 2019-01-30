@@ -19,6 +19,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - No changes.
 
+## 0.11.0 - 2019-01-30
+
+### Added
+
+- No changes.
+
+### Changed
+
+- Increased Contrast for WCAG [#62](https://github.com/ProctorU/hootstrap/pull/62) [Credit: Andrew Fomera @king601]
+
+### Removed
+
+- No changes.
+
 ## 0.10.1 - 2018-12-20
 
 ### Added
