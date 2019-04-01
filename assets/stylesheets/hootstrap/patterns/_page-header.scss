@@ -5,21 +5,8 @@
 }
 
 .page-title {
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+');
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 62%,
-    rgba(255, 244, 1, 0.94) 79%,
-    #fff401 80%,
-    rgba(255, 244, 1, 0) 98%
-  );
+  display: block;
   color: $page-title-color;
-  filter: progid:DXImageTransform.Microsoft.gradient(
-      startColorstr='#00ffffff',
-      endColorstr='#00fff401',
-      GradientType=0
-    );
-  display: inline-block;
 }
 
 .page-subtitle {
