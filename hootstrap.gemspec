@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.name        = 'hootstrap'
   s.version     = Hootstrap::VERSION
   s.authors     = ['Justin Licata', 'Andrew Fomera']
-  s.email       = ['licata.justin@gmail.com', 'afomera@proctoru.com']
+  s.email       = ['licata.justin@gmail.com', 'andrew@zerlex.net']
   s.homepage    = 'https://github.com/ProctorU/hootstrap'
   s.summary     = "ProctorU's design system."
   s.description = 'The design system of ProctorU, including components, patterns, and utilities.'
