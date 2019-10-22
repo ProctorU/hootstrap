@@ -19,6 +19,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - No changes.
 
+## 0.12.1 - 2019-10-16
+
+### Added
+
+- No changes.
+
+### Changed
+
+- Update `$page-subtitle-color` to be according to WCAG [#75](https://github.com/ProctorU/hootstrap/pull/75)
+
+### Removed
+
+- No changes.
+
+
 ## 0.12.0 - 2019-04-01
 
 ### Added
