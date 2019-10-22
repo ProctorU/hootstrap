@@ -1,3 +1,3 @@
 module Hootstrap
-  VERSION = '0.12.1'.freeze
+  VERSION = '0.13.1'.freeze
 end
