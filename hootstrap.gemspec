@@ -18,5 +18,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '>= 4.2.0'
   s.add_dependency 'sass-rails'
-  s.add_dependency 'bootstrap', '~> 4.1.3'
+  s.add_dependency 'bootstrap', '>= 4.1.3', '< 4.7.0'
 end
