@@ -1813,7 +1813,7 @@ fieldset:disabled a.btn {
     background-color: #727b84;
     border-color: #6c757d; }
   .btn-secondary:focus, .btn-secondary.focus {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.15rem rgba(134, 142, 150, 0.5); }
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.75), 0 0 0 0.15rem rgba(134, 142, 150, 0.75); }
   .btn-secondary.disabled, .btn-secondary:disabled {
     color: #fff;
     background-color: #868e96;
